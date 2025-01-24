@@ -1,0 +1,144 @@
+{
+    "HomePage": {
+        "title": "HomePage",
+        "content": "Home content"
+    },
+
+    "NavMenu": {
+        "home": "Home",
+        "turnstile": "Turnstile",
+        "security-systems": "Security Systems",
+        "smart-home": "Smart Home",
+        "about-us": "About Us",
+        "catalog": "Our Products"
+    },
+
+    "NavTop": {
+        "address": "Baghramyan st. 79, 1/1"
+    },
+
+    "TurnstileBanner": {
+        "title": "The best solutions for your access control",
+        "content": "Choose high-quality turnstiles for any area, tailored to your needs.",
+        "see_more_btn": "View the range",
+        "dawnload_pdf_btn": "Download price list",
+        "bannerItems": [
+            "Durability: long-term use",
+            "Maintaining order",
+            "Modern design and technology",
+            "Increased security"
+        ]
+    },
+
+    "OurProductsSection": {
+        "title": "Our Products",
+        "title2": "Entry Systems",
+        "see_more_btn": "View the range",
+        "order_btn": "Order"
+    },
+
+    "QrScanSection": {
+        "title": "QR code scanner",
+        "description": "If there is no opportunity or space to install a turnstile, we offer you the perfect solution: a QR scanning device that will make your space more organized and convenient.",
+        "advantages": [
+            "Convenient and simple installation. The device is easily attached to the wall and does not take up unnecessary space.",
+            "Compact design: A minimalist solution that blends in with any interior.",
+            "Functionality: Fast and accurate QR code scanning for access control or other processes.",
+            "Cost-effective solution: Get the same effective control without the need to install a turnstile."
+        ],
+        "order": "Order"
+    },
+
+    "MadeInArmeniaSection": {
+        "title": "Made in Armenia",
+        "description": "We offer a wide range of turnstiles that suit different needs and environments, from offices to high-traffic public areas. Our products are manufactured in Armenia, ensuring high quality and competitive prices. Turnstiles are suitable for both security and law enforcement. We also offer customized solutions to meet your requirements.",
+        "view_more_btn": "View the range"
+    },
+
+    "TurnstileInfoSection": {
+        "title": "Your Reliable Choice of Turnstiles",
+        "description": "The turnstiles are equipped with the latest technologies: card, QR code and facial recognition systems. They are made of high-quality materials, ensuring durability and long-term use. Our products provide easy installation, technical support and affordable prices to meet the needs of any business.",
+        "view_more_btn": "View the range"
+    },
+
+    "ServicesSection": {
+        "titles": [
+            "With all types of systems",
+            "These features make turnstiles an ideal solution for various areas to ensure safety and efficiency."
+        ],
+        "items": [
+            "Facial recognition",
+            "Fingerprint recognition",
+            "QR scan",
+            "RFID card"
+        ]
+    },
+
+    "TurnstileServicesCicyleSection": {
+        "titles": [
+            "Our turnstile services, from sales to maintenance",
+            "Our company not only sells turnstiles, but also provides their professional maintenance, freeing you from technical problems and guaranteeing the uninterrupted operation of the equipment."
+        ],
+        "items": [
+            "Installation of turnstiles",
+            "Regular technical inspections",
+            "Individual solutions to your problems",
+            "Software updates"
+        ],
+        "btn": "Free consultation"
+    },
+
+    "AdminPanelScreenSection": {
+        "titles": [
+            "Track the entry and exit of your employees",
+            "Our turnstile systems allow you to easily and accurately track the entry and exit of your employees, providing a high level of control."
+        ]
+    },
+
+    "DeviceSection": {
+        "titleTurnstilePage": "You can also find us here.",
+        "titleHomePage": "Security systems",
+        "descriptionHomePage": "We offer a wide range of security systems suitable for both homes and business premises.",
+        "descriptionTurnstilePage":  "We offer a wide range of security systems suitable for both homes and business premises.",
+        "items": [
+            "Facial recognition devices",
+            "QR scanning devices",
+            "Parking management"
+        ]
+    },
+
+    "OurWorksSection": {
+        "title": "Our works",
+        "items": [
+            "Yerevan History Museum",
+            "Yerevan History Museum",
+            "Yerevan History Museum",
+            "Yerevan History Museum",
+            "Yerevan History Museum",
+            "Yerevan History Museum",
+            "Yerevan History Museum",
+            "Yerevan History Museum"
+        ]
+    },
+
+    "ContactSection": {
+        "title": "Fill in the fields to get a consultation.",
+        "placeholders": [
+            "Full Name*",
+            "Phone number*",
+            "Email*",
+            "Organization name",
+            "Attach file",
+            "Description"
+        ],
+
+        "validations": [
+            "Full Name is required!",
+            "Phone number is required!",
+            "Email is required!",
+            "Email format is incorrect."
+        ],
+
+        "btn": "Get a free consultation"
+    }
+}

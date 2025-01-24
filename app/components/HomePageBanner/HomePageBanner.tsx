@@ -1,0 +1,89 @@
+'use client'; // Mark this as a client component
+
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay'; 
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
+import ButtonComponent from '../ButtonComponent/ButtonComponent';
+import home_banner_img1 from '@/public/images/home_banner_img1.png'
+import home_banner_img2 from '@/public/images/home_banner_img2.png'
+import home_banner_img3 from '@/public/images/home_banner_img3.png'
+
+interface IBannerItem {
+    id: string;
+    image: string;
+    title: string;
+    description: string;
+}
+
+
+const HomePageBanner: React.FC  = () => {
+    const bannerSliderData: IBannerItem[] = [
+        {
+          id: '1',
+          image: home_banner_img1.src,
+          title: 'Բարձրացրեք ձեր turnstile անվտանգության և վերահսկողությունը մեր լուծումներով',
+          description: 'Մեր առաջարկում ենք լուծումներ, որոնք պաշտպանելու են ձեր տարածքը անցանկալի մուտքից։',
+        },
+        {
+          id: '2',
+          image: home_banner_img2.src,
+          title: 'Turnstile Համակարգեր',
+          description: 'Նախագծված հարմարավետության և անվտանգության համար',
+        },
+        {
+          id: '3',
+          image: home_banner_img3.src,
+          title: 'Անվտանգություն և հարմարավետություն',
+          description: 'Մեր լուծումները ապահովում են անվտանգություն և հարմարավետություն բոլոր իրավիճակներում։',
+        },
+      ];
+    return (
+        <div className="home_page_banner h-[770px] bg-white">
+            <Swiper
+                modules={[Pagination, Navigation, Autoplay]} // Add Autoplay to the modules
+                pagination={{ clickable: true }}
+                navigation
+                loop
+                autoplay={{
+                    delay: 3000, // 3 seconds delay
+                    disableOnInteraction: false, // Keep autoplay even when interacting with the swiper
+                }}
+                className="h-[670px] w-full"
+            >
+                {bannerSliderData.map((item) => (
+                    <SwiperSlide key={item.id}>
+                        <div style={{ backgroundImage: `url(${item.image})` }} className="relative h-full w-full bg-cover bg-no-repeat bg-center ">
+                            <div className="container h-full">
+                                <div className="max-w-[630px] flex flex-col gap-[30px] h-full pt-[120px] px-[70px] max-sm:px-2 items-start">
+                                    <h1 className="text-white text-[40px] max-md:text-[30px] leading-[48px] font-normal Arm_Hmks_Bebas_Neue">
+                                        {item.title}
+                                    </h1>
+                                    <p className="text-[16px] text-white font-normal leading-[23.04px] freeSans">
+                                        {item.description}
+                                    </p>
+
+                                    <ButtonComponent
+                                        name="Ստանալ Խորհրդատվություն"
+                                        path="/calendar"
+                                        bg="#5939F5"
+                                        color="#FFFFFF"
+                                        size="16px"
+                                        px="15px"
+                                        py="7px"
+                                        redirect="https://calendly.com/webexprojects/30min?back=1&month=2024-12"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </div>
+    );
+};
+
+export default HomePageBanner;

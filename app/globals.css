@@ -7,15 +7,54 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: 'freeSans';
+  src: url('../public//fonts/FreeSans.otf');
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: 'Arm_Hmks_Bebas_Neue';
+  src: url('../public//fonts/FreeSans.otf') format('opentype');
+}
+
+@layer base {
+  * {
+    @apply m-0 p-0
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  .container{
+    @apply max-w-[1440px] mx-auto my-0
+  }
+
+  .arm_Hmks_Bebas_Neue{
+    font-family: Arm_Hmks_Bebas_Neue;
+  }
+
+  .freeSans {
+    font-family: freeSans;
+  }
+
+  .font_color{
+    color: #0E0449;
+  }
+
+  .my_shadow{
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.238);
+  }
+
+
+  .category_btn_hover:hover{
+    color: #5939F5 !important;
+  }
+
+}
+.turnstile_info_section .react-player__play-icon{
+  display: none !important; 
+}
+
+.swiper-button-prev, .swiper-button-next{
+  display: none !important;
 }
