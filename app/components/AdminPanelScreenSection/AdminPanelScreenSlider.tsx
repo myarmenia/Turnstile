@@ -8,6 +8,7 @@ import adminScreen5 from '@/public/images/admin_screen5.png'
 import adminScreen6 from '@/public/images/admin_screen6.png'
 import { NextSlideIcon } from '@/app/icons/NextSlideIcon'
 import { PrevSlideIcon } from '@/app/icons/PrevSlide'
+import Image from 'next/image'
 
 const AdminPanelScreenSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(0)
@@ -29,24 +30,30 @@ const AdminPanelScreenSlider = () => {
     }
 
 
-  return (
-    <div className='admin_panel_screen_slider w-full flex justify-center items-center px-[20px]'>
-        <button onClick={prevSlide}>
-            <PrevSlideIcon width={20} height={36} color={currentSlide === 0 ? "#A9A9A9" : "#0E0449"}/>
-        </button>
-        {
-            slides.map((slide, index) => (
-                <div key={index} className={index === currentSlide ? 'block' : 'hidden '}>
-                    <img src={slide.src} alt="admin screen"  className='w-screen h-[438px] max-md:h-[300px] max-sm:h-[200px]  object-contain'/>
-                </div>
-            ))
-        }
+    return (
+        <div className='admin_panel_screen_slider w-full flex justify-center items-center px-[20px]'>
+            <button onClick={prevSlide}>
+                <PrevSlideIcon width={20} height={36} color={currentSlide === 0 ? "#A9A9A9" : "#0E0449"} />
+            </button>
+            {
+                slides.map((slide, index) => (
+                    <div key={index} className={index === currentSlide ? 'block' : 'hidden'}>
+                        <Image
+                            src={slide}
+                            alt="admin screen"
+                            width={1920} // Specify a width
+                            height={438} // Specify a height
+                            className='w-screen h-[438px] max-md:h-[300px] max-sm:h-[200px] object-contain'
+                        />
+                    </div>
+                ))
+            }
 
-        <button onClick={nextSlide}>
-            <NextSlideIcon width={20} height={36} color={currentSlide === slides.length - 1 ? "#A9A9A9" : "#0E0449"}/>
-        </button>
-    </div>
-  )
+            <button onClick={nextSlide}>
+                <NextSlideIcon width={20} height={36} color={currentSlide === slides.length - 1 ? "#A9A9A9" : "#0E0449"} />
+            </button>
+        </div>
+    )
 }
 
 export default AdminPanelScreenSlider

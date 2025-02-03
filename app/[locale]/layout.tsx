@@ -34,16 +34,16 @@ export default async function RootLayout({
   params, // Access route parameters, including `locale`
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: any }; // Ensure `locale` is part of the structure
+  params: { locale: string}; // Ensure `locale` is part of the structure
 }>) {
-  const { locale } = await params;
+  const  {locale}  = await params;
+
 
    // Await the params to ensure they are resolved
 
   // Get the messages for the current locale
-  const messages = await getMessages(locale); // Fetch messages for the given locale
-
-  
+  const messages = await getMessages({locale:locale}); // Fetch messages for the given locale
+    
   return (
     <html>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>

@@ -7,6 +7,15 @@ import { useTranslations } from 'next-intl';
 import transparent_img  from '@/public/images/contact_transparentImg.png'
 import Image from 'next/image';
 
+interface IContact {
+  fullName: string;
+  phone: string;
+  email: string;
+  organization: string;
+  file: File | string | null;
+  fileName: string;
+  description: string;
+}
 const ContactSection = () => {
     const t = useTranslations('ContactSection')
   const initialValues = {
@@ -28,7 +37,7 @@ const ContactSection = () => {
     description: Yup.string(),
   });
 
-  const handleSubmit = (values:any) => {
+  const handleSubmit = (values:IContact) => {
     console.log('Form Data:', values);
     // Add your form submission logic here
   };
@@ -128,8 +137,8 @@ const ContactSection = () => {
                     id="file"
                     type="file"
                     hidden
-                    onChange={(event:any) => {
-                      const file = event.currentTarget.files[0];
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                      const file = event.currentTarget.files ? event.currentTarget.files[0] : null;
                       setFieldValue('file', file);
                       setFieldValue('fileName', file ? file.name : '');
                     }}

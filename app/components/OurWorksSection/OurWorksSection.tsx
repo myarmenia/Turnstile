@@ -4,11 +4,12 @@ import Pz3Img from '@/public/images//PZ-3.png'
 import ourWorksBackground from '@/public/images/our_works_sectionBackground.png'
 import VideoComponent from '../VideoComonent/VideoComonent'
 import { useTranslations } from 'next-intl'
+import { StaticImageData } from 'next/image'
 
 interface IOurWorksItem {
     id: string,
     title: string,
-    img: any,
+    img: StaticImageData,
     video:string,
 }
 const OurWorksSection = () => {

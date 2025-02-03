@@ -4,10 +4,11 @@ import service_info_img2 from '@/public/images/info_servicesItemImg2.png'
 import service_info_img3 from '@/public/images/info_servicesItemImg3.png'
 import ButtonComponent from '../ButtonComponent/ButtonComponent'
 import { cookies } from 'next/headers'; 
+import { StaticImageData } from 'next/image'
 
 interface IServicesItem {
     id: string,
-    img: any,
+    img: StaticImageData,
     title: string,
     route: string;
 }

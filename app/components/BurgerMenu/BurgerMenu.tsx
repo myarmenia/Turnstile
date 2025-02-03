@@ -1,7 +1,6 @@
 
 'use client'
-import Link from 'next/link';
-import React, { useEffect } from 'react';
+import React from 'react';
 import BurgerMenuItem from './BurgerMenuItem';
 import { useAppSelector } from '@/app/hooks';
 import { selectIsOpenBurgerMenu } from '@/app/store/slices/burgerMenuSlice/burgerMenuSlice';

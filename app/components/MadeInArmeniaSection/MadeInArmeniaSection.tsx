@@ -2,13 +2,10 @@ import React from 'react'
 import ourWorksBackground from '@/public/images/our_works_sectionBackground.png'
 import { LineIcon } from '@/app/icons/LineIcon'
 import { useTranslations } from 'next-intl'
-import ButtonComponent from '../ButtonComponent/ButtonComponent'
-import { cookies } from 'next/headers';
+import ButtonParrentComponent from '../ButtonParrentComponent/ButtonParrentComponent'
 
-const MadeInArmeniaSection = async() => {
+const MadeInArmeniaSection = () => {
     const t = useTranslations('MadeInArmeniaSection')
-    const cookieStore = await cookies();
-    const lang = cookieStore.get('lang')?.value || 'am'; 
     return (
         <div style={{ backgroundImage: `url(${ourWorksBackground.src})` }} className="made_in_armenia_section bg-cover bg-center bg-no-repeat">
             <div className="container flex flex-col gap-[30px] justify-center items-center">
@@ -22,7 +19,8 @@ const MadeInArmeniaSection = async() => {
                     <p className='text-white text-[16px] font-normal freeSans leading-[24px] text-center'>
                         {t('description')}
                     </p>
-                    <ButtonComponent name={t('view_more_btn')} path={`${lang}/catalog`} bg="transparent" color="#FFFFFF" size="14px" border="1px solid white" py="9px" px="40px"/> 
+                    {/* <ButtonComponent name={t('view_more_btn')} path={`${lang}/catalog`} bg="transparent" color="#FFFFFF" size="14px" border="1px solid white" py="9px" px="40px"/>  */}
+                    <ButtonParrentComponent btnText={t('view_more_btn')} />
                 </div>
 
             </div>

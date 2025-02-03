@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { useTranslations } from 'next-intl';
 import ButtonParrentComponent from '../ButtonParrentComponent/ButtonParrentComponent';
 
 interface BannerItem {
-    id: string
-    icon: any;
+    id: string;
+    icon: ReactNode; // Use ReactNode for JSX elements
     title: string;
 }
 
@@ -16,13 +16,12 @@ interface IContent {
 
 interface BannerProps {
     bannerData?: BannerItem[];
-    bg: any;
-    content: IContent,
+    bg: string; // Assuming bg is a URL string
+    content: IContent;
     page?: string;
 }
 
-
-const Banner = ({bannerData, bg, content, page}:BannerProps ) => {
+const Banner: React.FC<BannerProps> = ({ bannerData, bg, content, page }) => {
     const t = useTranslations('TurnstileBanner');
 
     return (
@@ -43,7 +42,7 @@ const Banner = ({bannerData, bg, content, page}:BannerProps ) => {
 
                         {/* Buttons */}
                         <div className="flex items-center gap-3">
-                            <ButtonParrentComponent btnText={content.btn}/>
+                            <ButtonParrentComponent btnText={content.btn} />
 
                             <button className="bg-white py-[7px] px-[15px] text-[16px] text-black rounded-[4px] freeSans">
                                 {t('dawnload_pdf_btn')}
@@ -53,17 +52,22 @@ const Banner = ({bannerData, bg, content, page}:BannerProps ) => {
                 </div>
             </div>
 
-            {/* Additional Section (if needed) */}
-            {bannerData &&<div className=" max-sm:w-full max-w-[800px] flex items-center max-sm:flex-wrap justify-center gap-[20px] absolute left-[50%] max-sm:bottom-[-250px] transform -translate-x-[50%] -translate-y-[50%]">
-                {
-                    bannerData.map(item => (
-                        <div key={item.id} className='max-md:w-[150px] w-[200px] h-[168px] bg-white flex flex-col items-center justify-start gap-[10px] p-[20px] shadow-xl'>
+            {/* Additional Section */}
+            {bannerData && (
+                <div className="max-sm:w-full max-w-[800px] flex items-center max-sm:flex-wrap justify-center gap-[20px] absolute left-[50%] max-sm:bottom-[-450px] transform -translate-x-[50%] -translate-y-[50%]">
+                    {bannerData.map((item) => (
+                        <div
+                            key={item.id}
+                            className="max-md:w-[150px] w-[200px] h-[168px] bg-white flex flex-col items-center justify-start gap-[10px] p-[20px] shadow-xl"
+                        >
                             <span>{item.icon}</span>
-                            <p className='freeSans leading-[24px] max-sm:text-[12px] max-md:text-[14px] text-[16px] font-normal text-center font_color'>{item.title}</p>
+                            <p className="freeSans leading-[24px] max-sm:text-[12px] max-md:text-[14px] text-[16px] font-normal text-center font_color">
+                                {item.title}
+                            </p>
                         </div>
-                    ))
-                }
-            </div>}
+                    ))}
+                </div>
+            )}
         </div>
     );
 };

@@ -1,4 +1,5 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import {createSlice } from "@reduxjs/toolkit";
+import { RootState } from "../../store";
 
 
 const initialState = {
@@ -18,7 +19,8 @@ const burgerMenuSlice = createSlice({
 
 });
 
-export const selectIsOpenBurgerMenu = (state:any) =>  state.viewBurgerMenu.isOpenBurgerMenu
+export const selectIsOpenBurgerMenu = (state: RootState) => state.viewBurgerMenu.isOpenBurgerMenu;
+
 
 export const {
     toggleBurgerMenu

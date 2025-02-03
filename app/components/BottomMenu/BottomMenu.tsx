@@ -11,18 +11,19 @@ const BottomMenu = () => {
     const [activeContactModal, setActiveContactModal] = useState(false);
 
     useEffect(() => {
-        const handleClickOutside = (e:any) => {
-            if (!e.target.closest('.message_modal') && !e.target.closest('.phone_icon')) {
+        const handleClickOutside = (e: MouseEvent) => {
+            const target = e.target as HTMLElement;
+            if (!target.closest('.message_modal') && !target.closest('.phone_icon')) {
                 setActiveContactModal(false);
             }
         };
-
+    
         document.addEventListener('click', handleClickOutside);
-
+    
         return () => {
             document.removeEventListener('click', handleClickOutside);
         };
-    }, []);
+    }, [])
 
     return (
         <div className='sm:hidden h-[60px] bg-white w-full fixed bottom-0 z-30 flex justify-between items-center px-[30px] shadow-2xl shadow-black'>

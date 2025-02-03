@@ -1,4 +1,5 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import {createSlice } from "@reduxjs/toolkit";
+import { RootState } from "../../store";
 
 
 const initialState = {
@@ -20,8 +21,8 @@ const consultingModalSlice = createSlice({
 
 });
 
-export const selectIsOpenConsultingModal= (state:any) =>  state.viewConsultingModal.isOpenConsultingModal
-export const selectOrderCode = (state:any) =>  state.viewConsultingModal.orderCode
+export const selectIsOpenConsultingModal= (state:RootState) =>  state.viewConsultingModal.isOpenConsultingModal
+export const selectOrderCode = (state:RootState) =>  state.viewConsultingModal.orderCode
 
 export const {
     toggleConsultingModal

@@ -1,7 +1,7 @@
 'use client'
 import { useAppDispatch, useAppSelector } from '@/app/hooks';
 import { selectIsOpenBurgerMenu, toggleBurgerMenu } from '@/app/store/slices/burgerMenuSlice/burgerMenuSlice';
-import React, { useState } from 'react';
+import React from 'react';
 
 const BurgerMenuIcon = () => {
     const isOpenBurgerMenu = useAppSelector(selectIsOpenBurgerMenu)

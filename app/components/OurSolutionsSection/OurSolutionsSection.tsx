@@ -1,5 +1,5 @@
 import { LineIcon } from '@/app/icons/LineIcon'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import ourSolutionBachgroundImg from '@/public/images/ourSolutionsSectionBacground.png'
 import { ShlaqBawnScanIcon } from '@/app/icons/ShlaqBawnScanIcon'
 import { CarScanIcon } from '@/app/icons/CarScanIcon'
@@ -11,7 +11,7 @@ import { RightChvronIcon } from '@/app/icons/RightChvronIcon'
 interface SolutionItem {
     id: string,
     title: string,
-    icon: any,
+    icon: ReactNode,
     route: string,
     description: string,
 

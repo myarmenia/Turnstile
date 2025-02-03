@@ -6,10 +6,18 @@ import { XIcon } from '@/app/icons/XIcon';
 import { useAppDispatch, useAppSelector } from '@/app/hooks';
 import { selectIsOpenConsultingModal, selectOrderCode, toggleConsultingModal } from '@/app/store/slices/consultingModalSlice/consultingModalSlice';
 import { useSelector } from 'react-redux';
+
+
+interface InitialValues {
+  fullName: string;
+  phone: string;
+  email: string;
+  time: string;
+  product: string;
+  description: string;
+}
 const ConsultingModal = () => {
   const isOpenModal = useAppSelector(selectIsOpenConsultingModal)
-  console.log(isOpenModal,6666);
-  
   const orderCode = useSelector(selectOrderCode)
   const dispatch = useAppDispatch()
   const initialValues = {
@@ -30,7 +38,7 @@ const ConsultingModal = () => {
     description: Yup.string(),
   });
 
-  const handleSubmit = (values: any) => {
+  const handleSubmit = (values: InitialValues) => {
     console.log('Form Data:', values);
     // Add your form submission logic here
   };
@@ -41,7 +49,7 @@ const ConsultingModal = () => {
           validationSchema={validationSchema}
           onSubmit={handleSubmit}
         >
-          {({ setFieldValue, values }) => (
+          {() => (
             <Form className="max-w-[860px] flex flex-col gap-[20px] justify-center items-center bg-white my_shadow p-[40px] max-sm:px-[10px] rounded-xl z-10 relative">
               <div className="flex flex-col justify-center items-center md:items-start gap-[20px] md:flex-row ">
                 <div className="flex flex-col gap-[10px]">

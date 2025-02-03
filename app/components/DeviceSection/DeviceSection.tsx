@@ -4,13 +4,13 @@ import { LineIcon } from '@/app/icons/LineIcon'
 import faceIdDeviceImg from '@/public/images/faceIdDeviceImg.png'
 import qrDeviceImg from '@/public/images/QrDeviceImg.png'
 import shlaqBawuDeviceImg from '@/public/images/shlaqBawnImg.png'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { useTranslations } from 'next-intl'
 interface IDevice {
-    id: string,
-    title: string,
-    img: any
-}
+    id: string;
+    title: string;
+    img: StaticImageData; 
+  }
 
 interface IProps {
     title: string

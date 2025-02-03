@@ -1,7 +1,6 @@
 'use client'
 import Link from 'next/link';
-import React from 'react';
-import { cookies } from 'next/headers'; 
+import React, { ReactNode } from 'react';
 import { useDispatch } from 'react-redux';
 import { toggleConsultingModal } from '@/app/store/slices/consultingModalSlice/consultingModalSlice';
 
@@ -16,17 +15,16 @@ interface IButtonProps {
   py?: string;
   px?: string;
   width?: string;
-  icon?: any;
+  icon?: ReactNode;
   customClass?: string;
   redirect?: string;
   order?: string;
 }
-
 const ButtonComponent = ({ name, path, bg, color, size, border = 'none', py, px, width, icon, customClass, redirect, order}: IButtonProps) => {
   const dispatch = useDispatch()
   const currentPath = path && path !== '/calendar' ? `/${path}` : '';
   
-  const handleButtonClick = (e: any) => {
+  const handleButtonClick = () => {
     if (redirect) {
       window.open(redirect, '_blank'); 
     }

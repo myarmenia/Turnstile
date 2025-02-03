@@ -14,12 +14,12 @@ import { DocumentIcon } from '@/app/icons/DocumentIcon';
 import { TurnstileIcon } from '@/app/icons/TurnstileIcon';
 import { SecurityIcon } from '@/app/icons/SecurityIcon';
 import bannerBackground from '@/public/images/turnstileBannerBachgroundImage.png';
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { useTranslations } from 'next-intl'
 
 interface BannerItem {
     id: string
-    icon: any;
+    icon: ReactNode;
     title: string;
 }
 

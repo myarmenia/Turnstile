@@ -5,7 +5,7 @@ import pz_13_img from '@/public/images/PZ-13.png';
 import pz_14_img from '@/public/images/PZ-14.png';
 import pz_3_img from '@/public/images/PZ-3.png';
 import pz_4_img from '@/public/images/PZ-4.png';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { OneSidedTurnstileIcon } from '@/app/icons/OneSidedTurnstileIcon';
 import { TwoSidedTurnstileIcon } from '@/app/icons/TwoSidedTurnstileIcon';
 import ButtonComponent from '../ButtonComponent/ButtonComponent';
@@ -17,7 +17,7 @@ interface IOurProduct {
   code: string;
   price1: string;
   price2: string;
-  img: any;
+  img: StaticImageData;
 }
 
 
