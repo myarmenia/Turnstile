@@ -3,7 +3,7 @@ import ButtonComponent from '../ButtonComponent/ButtonComponent'
 import Image, { StaticImageData } from 'next/image';
 import { useTranslations } from 'next-intl';
 import { our_products_data } from '@/utils/catalog';
-import CatalogSearchInput from '../CatalogSearchInput/CatalogSearchInput';
+// import CatalogSearchInput from '../CatalogSearchInput/CatalogSearchInput';
 
 interface IOurProduct {
     id: string;
