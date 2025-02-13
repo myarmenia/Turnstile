@@ -6,6 +6,7 @@ import SecurityInfoSection from '@/app/components/SecurityInfoSection/SecurityIn
 import WhyChooseUsSection from '@/app/components/WhyChooseUsSection/WhyChooseUsSection';
 import MobileAppSection from '@/app/components/MobileAppSection/MobileAppSection';
 import FrequentlyAsked from '@/app/components/FrequentlyAsked/FrequentlyAsked';
+import ContactSection from '@/app/components/ContactSection/ContactSection';
 
 interface IContent {
     title: string;
@@ -28,6 +29,7 @@ const SecuritySystems = () => {
             <WhyChooseUsSection/>
             <MobileAppSection/>
             <FrequentlyAsked/>
+            <ContactSection/>
         </div>
     );
 }

@@ -30,6 +30,18 @@
         ]
     },
 
+    "BannerList": {
+        "title": "Our Range",
+        "text": "We offer entrance security and control systems that allow you to:",
+        "list": [
+            "Block entry for unauthorized individuals.",
+            "Allow employees or authorized persons to enter using QR codes, RFID cards, FaceID devices, and fingerprint scanners.",
+            "Monitor employees' entry and exit dates and times.",
+            "Generate reports on employees' entry and exit data for different time periods (month, quarter, year).",
+            "Control visitor access with the ability to limit the number of entries. In addition, we implement other features and functionalities in the system according to the client's needs."
+        ]
+    },
+
     "OurProductsSection": {
         "title": "Our Products",
         "title2": "Entry Systems",
@@ -140,5 +152,31 @@
         ],
 
         "btn": "Get a free consultation"
+    },
+
+    "FrequentlyAsked" : {
+        "title" : "Frequently asked questions",
+        "questions" : [
+            {
+                "question" : "How can I control the security system from my phone?",
+                "answer" : "Our app allows you to control all your devices from one platform. You can turn the alarm on or off, view live camera feeds, and receive alerts about threats."
+            },
+            {
+                "question" : "How does facial recognition technology work?",
+                "answer" : "Մեր հավելվածը թույլ է տալիս վերահսկել բոլոր սարքերը մեկ հարթակից։ Կարող եք միացնել կամ անջատել ահազանգը, տեսնել տեսախցիկների կենդանի հոսքը և ստանալ ծանուցումներ վտանգի մասին։"
+            },
+            {
+                "question" : "Can I manage systems in multiple locations at the same time?",
+                "answer" : "Մեր հավելվածը թույլ է տալիս վերահսկել բոլոր սարքերը մեկ հարթակից։ Կարող եք միացնել կամ անջատել ահազանգը, տեսնել տեսախցիկների կենդանի հոսքը և ստանալ ծանուցումներ վտանգի մասին։"
+            },
+            {
+                "question" : "Why are laser control systems effective?",
+                "answer" : "Մեր հավելվածը թույլ է տալիս վերահսկել բոլոր սարքերը մեկ հարթակից։ Կարող եք միացնել կամ անջատել ահազանգը, տեսնել տեսախցիկների կենդանի հոսքը և ստանալ ծանուցումներ վտանգի մասին։"
+            },
+            {
+                "question" : "Can I manage systems in multiple locations at the same time?",
+                "answer" : "Մեր հավելվածը թույլ է տալիս վերահսկել բոլոր սարքերը մեկ հարթակից։ Կարող եք միացնել կամ անջատել ահազանգը, տեսնել տեսախցիկների կենդանի հոսքը և ստանալ ծանուցումներ վտանգի մասին։"
+            }
+        ]
     }
 }

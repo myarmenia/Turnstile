@@ -86,7 +86,7 @@ const OurProductsSection = ({ title }: { title: string }) => {
                 <h3 className="freeSans font_color font-normal text-[16px] leading-[19.2px] text-center">
                   {item.code}
                 </h3>
-                <div className="flex items-center gap-[15px] w-full justify-center">
+                {/* <div className="flex items-center gap-[15px] w-full justify-center">
                   {item?.price1 && (
                     <div className="flex gap-2">
                       <OneSidedTurnstileIcon
@@ -116,7 +116,7 @@ const OurProductsSection = ({ title }: { title: string }) => {
                       </span>
                     </div>
                   )}
-                </div>
+                </div> */}
                 <ButtonComponent
                   name={t('order_btn')}
                   bg="transparent"
