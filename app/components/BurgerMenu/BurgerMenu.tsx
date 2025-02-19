@@ -19,8 +19,8 @@ const BurgerMenu = () => {
                 <BurgerMenuItem name={t('home')} path="/" />
                 <BurgerMenuItem name={t('turnstile')} path="/turnstile" />
                 <BurgerMenuItem name={t('security-systems')} path="/security-systems" />
-                <BurgerMenuItem name={t('smart-home')} path="/smart-home" />
-                <BurgerMenuItem name={t('about-us')} path="/about-us" />
+                {/* <BurgerMenuItem name={t('smart-home')} path="/smart-home" />
+                <BurgerMenuItem name={t('about-us')} path="/about-us" /> */}
                 <BurgerMenuItem name={t('catalog')} path="/catalog" />
             </ul>
             <div className='px-[10px]'>

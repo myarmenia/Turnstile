@@ -23,7 +23,7 @@ export const TurnstileInfoSection = () => {
 
                 <div className='w-[45%] max-md:w-[85%] flex justify-center items-center '>
                     <div className='w-[100%] h-[300px] md:w-[640px] md:h-[384px] relative '>
-                        <VideoComonent path="/videos/example.mp4" thumb={thumbImg.src}/>
+                        <VideoComonent path="/videos/Our_Work.mp4" thumb={thumbImg.src}/>
                         <span className='absolute top-[-20px] left-[-20px]'><AngleTopLeftIcon width={26} height={26} color="#5939F5"/></span>
                         <span className='absolute top-[-20px] right-[-20px]'><AngleTopRightIcon width={26} height={26} color="#5939F5"/></span>
                         <span className='absolute bottom-[-20px] left-[-20px]'><AngleBottomLeftIcon width={26} height={26} color="#5939F5"/></span>

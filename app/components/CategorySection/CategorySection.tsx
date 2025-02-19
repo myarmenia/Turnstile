@@ -2,8 +2,8 @@ import React from 'react'
 import categorySmartHomeImg from '@/public/images/category_section_smart_homeImg.png'
 import categorySecuritySystemsImg from '@/public/images/category_section_securitySystemsImg.png'
 import categoryTurnstileImg from '@/public/images/category_section_turnstileImg.png'
-import ButtonComponent from '../ButtonComponent/ButtonComponent'
-import { RightArrowIcon } from '@/app/icons/LeftArrowIcon'
+// import ButtonComponent from '../ButtonComponent/ButtonComponent'
+// import { RightArrowIcon } from '@/app/icons/LeftArrowIcon'
 import { cookies } from 'next/headers'; 
 
 interface ICategoryItem {
@@ -51,7 +51,7 @@ const CategorySection = async() => {
                             <div className='max-w-[300px] flex flex-col gap-[30px]'>
                                 <h3 className={`font-semibold text-[24px] leading-[32px] arm_Hmks_Bebas_Neue ${+category.id % 2 !== 0 ? "text-white" : "text-black"}`}>{category.title}</h3>
                                 <p className={`font-normal text-[22px] leading-[32px] freeSans ${+category.id % 2 !== 0 ? "text-white" : "text-black"}`}>{category.description}</p>
-                                <ButtonComponent
+                                {/* <ButtonComponent
                                     name="Ավելին"
                                     path={category.path}
                                     bg="transparent"    
@@ -59,7 +59,7 @@ const CategorySection = async() => {
                                     size="16px"
                                     icon={<RightArrowIcon width={24} height={24} color={+category.id % 2 !== 0 ? "white" : "black"}/>}
                                     customClass='category_btn_hover'
-                                />
+                                /> */}
                             </div>
                         </div>
                     </div>

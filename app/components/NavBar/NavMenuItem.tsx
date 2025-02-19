@@ -11,6 +11,7 @@ interface NavMenuItemProps {
 const NavMenuItem: React.FC<NavMenuItemProps> = async ({ name, path, color }) => {
   const cookieStore = await cookies();
   const lang = cookieStore.get('lang')?.value || 'am'; 
+
   
 
   return (

@@ -45,7 +45,8 @@ const InfoServices = async() => {
                         <div style={{ backgroundImage: `url(${service.img.src})` }} key={service.id} className='flex items-center justify-end gap-[20px] bg-cover bg-center bg-no-repeat grow basis-[300px] h-[264px] rounded'>
                             <div className='flex flex-col gap-[20px] items-start max-w-[150px] mr-[50px]'>
                                 <h3 className='text-[22px] font_color font-semibold  leading-[32px] w-full arm_Hmks_Bebas_Neue'>{service.title}</h3>
-                                <ButtonComponent
+                                {
+                                    service.id !== "2" && <ButtonComponent
                                     name="Ավելին"
                                     path={service.route}
                                     bg="#5939F5"
@@ -55,6 +56,7 @@ const InfoServices = async() => {
                                     px='0'
                                     py="7px"
                                 />
+                                }
                             </div>
                         </div>
                     ))
