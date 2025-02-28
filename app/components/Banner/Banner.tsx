@@ -59,11 +59,11 @@ const Banner: React.FC<BannerProps> = ({ bannerData, bg, content, page }) => {
 
             {/* Additional Section */}
             {bannerData && (
-                <div className="max-sm:w-full max-w-[800px] flex items-center max-sm:flex-wrap justify-center gap-[20px] absolute left-[50%] max-sm:bottom-[-450px] transform -translate-x-[50%] -translate-y-[50%]">
+                <div className="max-sm:w-full max-w-[800px] flex items-center max-sm:flex-wrap justify-center gap-[20px] absolute left-[50%] max-sm:bottom-[-450px] transform -translate-x-[50%] -translate-y-[50%] max-sm:-translate-x-0 max-sm:-translate-y-0 max-sm:static max-sm:left-0 py-4 px-6">
                     {bannerData.map((item) => (
                         <div
                             key={item.id}
-                            className="max-md:w-[150px] w-[200px] h-[168px] bg-white flex flex-col items-center justify-start gap-[10px] p-[20px] shadow-xl"
+                            className="max-md:w-[140px] w-[200px] h-[168px] bg-white flex flex-col items-center justify-start gap-[10px] p-[20px] shadow-xl"
                         >
                             <span>{item.icon}</span>
                             <p className="freeSans leading-[24px] max-sm:text-[12px] max-md:text-[14px] text-[16px] font-normal text-center font_color">

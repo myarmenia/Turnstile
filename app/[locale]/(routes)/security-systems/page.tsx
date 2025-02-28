@@ -7,6 +7,7 @@ import WhyChooseUsSection from '@/app/components/WhyChooseUsSection/WhyChooseUsS
 import MobileAppSection from '@/app/components/MobileAppSection/MobileAppSection';
 import FrequentlyAsked from '@/app/components/FrequentlyAsked/FrequentlyAsked';
 import ContactSection from '@/app/components/ContactSection/ContactSection';
+import { useTranslations } from 'next-intl';
 
 interface IContent {
     title: string;
@@ -15,10 +16,11 @@ interface IContent {
 }
 
 const SecuritySystems = () => {
+    const t = useTranslations("SecuritySystemsBanner")
     const content: IContent = {
-        title: "Տարածքի ընդհանուր Անվտանգության  կառավարում՝ Ձեր Հեռախոսի միջոցով",
-        description: "Խելացի լուծումներ՝ բարիերների, մեքենաների ճանաչման, դեմքի ճանաչման, ահազանգի միացման և այլնի համար",
-        btn: "Գտնել լուծումը"
+        title: t("title"),
+        description: t("description"),
+        btn: t("btn")
     }
 
     return (

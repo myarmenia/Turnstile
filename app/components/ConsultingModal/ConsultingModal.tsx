@@ -43,14 +43,14 @@ const ConsultingModal = () => {
     // Add your form submission logic here
   };
   return (
-    <div style={{display: isOpenModal ? 'flex' : 'none'}} className='consulting_modal fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-55 flex justify-center items-center z-[99999999]'>
+    <div style={{display: isOpenModal ? 'flex' : 'none'}} className='consulting_modal fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-55 flex justify-center items-center z-[99999999]  '>
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
           onSubmit={handleSubmit}
         >
           {() => (
-            <Form className="max-w-[860px] flex flex-col gap-[20px] justify-center items-center bg-white my_shadow p-[40px] max-sm:px-[10px] rounded-xl z-10 relative">
+            <Form className="max-w-[860px] flex flex-col gap-[20px] justify-center items-center bg-white my_shadow p-[40px] max-sm:px-[10px] rounded-xl z-10 relative max-sm:h-[95vh] max-sm:gap-[2vh]">
               <div className="flex flex-col justify-center items-center md:items-start gap-[20px] md:flex-row ">
                 <div className="flex flex-col gap-[10px]">
                   <label className="freeSans font-normal text-[16px] leading-[24px] font_color">
@@ -59,7 +59,7 @@ const ConsultingModal = () => {
                   <Field
                     name="fullName"
                     type="text"
-                    className="border border-[#0E0449] h-[48px] w-[310px] max-md:w-[500px] max-sm:w-[300px] outline-none rounded pl-[15px]"
+                    className="border border-[#0E0449] h-[48px] w-[310px] max-md:w-[500px] max-sm:w-[300px] outline-none rounded pl-[15px] max-sm:h-[6vh]"
                   />
                 </div>
 
@@ -70,7 +70,7 @@ const ConsultingModal = () => {
                   <Field
                     name="phone"
                     type="text"
-                    className="border border-[#0E0449] h-[48px] w-[310px] max-md:w-[500px] max-sm:w-[300px] outline-none rounded pl-[15px]"
+                    className="border border-[#0E0449] h-[48px] w-[310px] max-md:w-[500px] max-sm:w-[300px] outline-none rounded pl-[15px] max-sm:h-[6vh]"
                   />
                 </div>
               </div>
@@ -83,7 +83,7 @@ const ConsultingModal = () => {
                   <Field
                     name="email"
                     type="email"
-                    className="border border-[#0E0449] h-[48px] w-[310px] max-md:w-[500px] max-sm:w-[300px] outline-none rounded pl-[15px]"
+                    className="border border-[#0E0449] h-[48px] w-[310px] max-md:w-[500px] max-sm:w-[300px] outline-none rounded pl-[15px] max-sm:h-[6vh]"
                   />
                   <ErrorMessage
                     name="email"
@@ -99,7 +99,7 @@ const ConsultingModal = () => {
                   <Field
                     name="time"
                     type="text"
-                    className="border border-[#0E0449] h-[48px] w-[310px] max-md:w-[500px] max-sm:w-[300px] outline-none rounded pl-[15px]"
+                    className="border border-[#0E0449] h-[48px] w-[310px] max-md:w-[500px] max-sm:w-[300px] outline-none rounded pl-[15px] max-sm:h-[6vh]"
                   />
                 </div>
               </div>
@@ -112,7 +112,7 @@ const ConsultingModal = () => {
                     value={orderCode || ''}
                     name="product"
                     type="text"
-                    className="w-[640px] max-md:w-[500px] max-sm:w-[300px] h-[48px] border border-[#0E0449] rounded outline-none pl-[15px]"
+                    className="w-[640px] max-md:w-[500px] max-sm:w-[300px] h-[48px] border border-[#0E0449] rounded outline-none pl-[15px] max-sm:h-[6vh]"
                   />
               </div>
 
@@ -123,7 +123,7 @@ const ConsultingModal = () => {
                 <Field
                   name="description"
                   as="textarea"
-                  className="w-[640px] max-md:w-[500px] max-sm:w-[300px] h-[140px] border border-[#0E0449] rounded outline-none pl-[15px]"
+                  className="w-[640px] max-md:w-[500px] max-sm:w-[300px] h-[140px] border border-[#0E0449] rounded outline-none pl-[15px] max-sm:h-[14vh]"
                 />
               </div>
 

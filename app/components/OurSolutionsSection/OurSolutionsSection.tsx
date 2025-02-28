@@ -7,6 +7,7 @@ import { FaceScanIcon } from '@/app/icons/FaceScanIcon'
 import { EyeScanIcon } from '@/app/icons/EyeScanIcon'
 import Link from 'next/link'
 import { RightChvronIcon } from '@/app/icons/RightChvronIcon'
+import { useTranslations } from 'next-intl'
 
 interface SolutionItem {
     id: string,
@@ -17,70 +18,71 @@ interface SolutionItem {
 
 }
 const OurSolutionsSection = () => {
+    const t = useTranslations("OurSolutionsSection")
 
     const solutions: SolutionItem[] = [
         {
             id: '1',
-            title: 'Բարիերների Կառավարում',
+            title: t("itemTitles.0"),
             icon: <ShlaqBawnScanIcon />,
             route: '/',
-            description: 'Օգտագործեք ձեր հեռախոսը՝ ավտոմատ բարիերների բացման և փակման համար։ Մեր համակարգերը ապահովում են արագ արձագանք, շարժման հսկողություն և ճշգրիտ տվյալների հավաքագրում։',
+            description: t("itemDescriptions.0"),
         },
 
         {
             id: '2',
-            title: 'Մեքենաների Ճանաչում',
+            title: t("itemTitles.1"),
             icon: <CarScanIcon />,
             route: '/',
-            description: 'Մեքենաների համար նախատեսված խելացի ճանաչման լուծումները թույլ են տալիս ավտոմատացված մուտք և ելք, իսկ արհեստական բանականությունը գրանցում է համարանիշներն ու վարքի մոդելները։',
+            description: t("itemDescriptions.1"),
         },
 
         {
             id: '3',
-            title: 'Դեմքի Ճանաչում',
+            title: t("itemTitles.2"),
             icon: <FaceScanIcon />,
             route: '/',
-            description: 'Դեմքի ճանաչման տեխնոլոգիան ապահովում է անվտանգության բարձր մակարդակ՝ թույլատրելով միայն հաստատված անձանց մուտք, ինչը կանխում է անցանկալի մուտքերը։',
+            description: t("itemDescriptions.2"),
         },
 
         {
             id: '4',
-            title: 'Ինֆրակարմիր ճառագայթներ',
+            title: t("itemTitles.3"),
             icon: <EyeScanIcon />,
             route: '/',
-            description: 'Ինֆրակարմիր ճառագայթներով անվտանգային լուծումները հիանալի են մեծ տարածքների համար։ Ապահովում են շարժման հայտնաբերում և ազդանշանային համակարգեր՝ անմիջապես ձեր հեռախոսից։',
+            description: t("itemDescriptions.3"),
         },
 
         {
             id: '5',
-            title: 'Լազերային Հսկողություն',
+            title: t("itemTitles.4"),
             icon: <EyeScanIcon />,
             route: '/',
-            description: 'Լազերային հիմքով անվտանգային լուծումները հիանալի են մեծ տարածքների համար։ Ապահովում են շարժման հայտնաբերում և ազդանշանային համակարգեր՝ անմիջապես ձեր հեռախոսից։',
+            description: t("itemDescriptions.4"),
         },
 
         {
             id: '6',
-            title: 'Մեքենաների Ճանաչում',
+            title: t("itemTitles.5"),
             icon: <CarScanIcon />,
             route: '/',
-            description: 'Մեքենաների համար նախատեսված խելացի ճանաչման լուծումները թույլ են տալիս ավտոմատացված մուտք և ելք, իսկ արհեստական բանականությունը գրանցում է համարանիշներն ու վարքի մոդելները։',
+            description: t("itemDescriptions.5"),
         },
 
         {
             id: '7',
-            title: 'Դեմքի Ճանաչում',
+            title: t("itemTitles.6"),
             icon: <FaceScanIcon />,
             route: '/',
-            description: 'Դեմքի ճանաչման տեխնոլոգիան ապահովում է անվտանգության բարձր մակարդակ՝ թույլատրելով միայն հաստատված անձանց մուտք, ինչը կանխում է անցանկալի մուտքերը։',
+            description: t("itemDescriptions.6"),
         },
 
         {
             id: '8',
-            title: 'Ինֆրակարմիր ճառագայթներ',
+            title: t("itemTitles.7"),
             icon: <EyeScanIcon />,
             route: '/',
-            description: 'Ինֆրակարմիր ճառագայթներով անվտանգային լուծումները հիանալի են մեծ տարածքների համար։ Ապահովում են շարժման հայտնաբերում և ազդանշանային համակարգեր՝ անմիջապես ձեր հեռախոսից։',
+            description: t("itemDescriptions.7"),
         },
 
     ]
@@ -91,7 +93,7 @@ const OurSolutionsSection = () => {
                 <div className="flex items-center justify-center gap-3">
                     <LineIcon width={27} height={2} color="#5939F5" />
                     <h2 className="text-[24px] font_color font-normal arm_Hmks_Bebas_Neue leading-[28.8px] uppercase">
-                        Մեր Լուծումները
+                        {t("title")}
                     </h2>
                     <LineIcon width={27} height={2} color="#5939F5" />
                 </div>
@@ -101,12 +103,12 @@ const OurSolutionsSection = () => {
                 <div className="container flex flex-wrap gap-[20px] ">
                     {
                         solutions.map((solution) => (
-                            <div key={solution.id} className='grow basis-72 bg-white p-[20px] rounded flex flex-col gap-[15px] items-center'>
+                            <div key={solution.id} className='grow basis-72 bg-white p-[20px] rounded flex flex-col gap-[15px] items-center justify-between'>
                                 <span>{solution.icon}</span>
                                 <h3 className='text-[20px] font_color font-semibold freeSans leading-[24px] text-center'>{solution.title}</h3>
                                 <p className='text-center font-normal freeSans text-[16px] leading-[24px] font_color'>{solution.description}</p>
                                 <Link href={solution.route} className='text-[16px] text-[#5939F5] font-normal freeSans leading-[24px] text-center uppercase hover:text-blue-700 flex items-center gap-1'>
-                                    <span>Մանրամասն</span>
+                                    <span>{t("btn")}</span>
                                     <RightChvronIcon/> 
                                 </Link>
                             </div>

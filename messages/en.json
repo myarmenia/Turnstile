@@ -1,182 +1,294 @@
 {
-    "HomePage": {
-        "title": "HomePage",
-        "content": "Home content"
+  "HomePage": {
+    "title": "HomePage",
+    "content": "Home content"
+  },
+
+  "HomePageCarousel": {
+    "titles": [
+      "Enhance your turnstile security and control with our solutions.",
+      "Turnstile Systems.",
+      "Security and Comfort."
+    ],
+    "paragraphs": [
+      "We offer solutions that will protect your space from unwanted entry.",
+      "Designed for comfort and security.",
+      "Our solutions provide security and comfort in all situations."
+    ],
+    "buttonText": "Get Consultation"
+  },
+
+  "NavMenu": {
+    "home": "Home",
+    "turnstile": "Turnstile",
+    "security-systems": "Security Systems",
+    "smart-home": "Smart Home",
+    "about-us": "About Us",
+    "catalog": "Our Products"
+  },
+
+  "NavTop": {
+    "address": "Baghramyan st. 79, 1/1"
+  },
+
+  "TurnstileBanner": {
+    "title": "The best solutions for your access control",
+    "content": "Choose high-quality turnstiles for any area, tailored to your needs.",
+    "see_more_btn": "View the range",
+    "dawnload_pdf_btn": "Download price list",
+    "bannerItems": [
+      "Durability: long-term use",
+      "Maintaining order",
+      "Modern design and technology",
+      "Increased security"
+    ]
+  },
+
+  "BannerList": {
+    "title": "Our Range",
+    "text": "We offer entrance security and control systems that allow you to:",
+    "list": [
+      "Block entry for unauthorized individuals.",
+      "Allow employees or authorized persons to enter using QR codes, RFID cards, FaceID devices, and fingerprint scanners.",
+      "Monitor employees' entry and exit dates and times.",
+      "Generate reports on employees' entry and exit data for different time periods (month, quarter, year).",
+      "Control visitor access with the ability to limit the number of entries. In addition, we implement other features and functionalities in the system according to the client's needs."
+    ]
+  },
+
+  "InfoServices": {
+    "titles": [
+      "Turnstile Sales and Service",
+      "Smart Home Solutions",
+      "Barriers and Security Systems"
+    ],
+    "btn" : "More"
+  },
+
+  "OurProductsSection": {
+    "title": "Our Products",
+    "title2": "Entry Systems",
+    "see_more_btn": "View the range",
+    "order_btn": "Order"
+  },
+
+  "QrScanSection": {
+    "title": "QR code scanner",
+    "description": "If there is no opportunity or space to install a turnstile, we offer you the perfect solution: a QR scanning device that will make your space more organized and convenient.",
+    "advantages": [
+      "Convenient and simple installation. The device is easily attached to the wall and does not take up unnecessary space.",
+      "Compact design: A minimalist solution that blends in with any interior.",
+      "Functionality: Fast and accurate QR code scanning for access control or other processes.",
+      "Cost-effective solution: Get the same effective control without the need to install a turnstile."
+    ],
+    "order": "Order"
+  },
+
+  "MadeInArmeniaSection": {
+    "title": "Made in Armenia",
+    "description": "We offer a wide range of turnstiles that suit different needs and environments, from offices to high-traffic public areas. Our products are manufactured in Armenia, ensuring high quality and competitive prices. Turnstiles are suitable for both security and law enforcement. We also offer customized solutions to meet your requirements.",
+    "view_more_btn": "View the range"
+  },
+
+  "TurnstileInfoSection": {
+    "title": "Your Reliable Choice of Turnstiles",
+    "description": "The turnstiles are equipped with the latest technologies: card, QR code and facial recognition systems. They are made of high-quality materials, ensuring durability and long-term use. Our products provide easy installation, technical support and affordable prices to meet the needs of any business.",
+    "view_more_btn": "View the range"
+  },
+
+  "ServicesSection": {
+    "titles": [
+      "With all types of systems",
+      "These features make turnstiles an ideal solution for various areas to ensure safety and efficiency."
+    ],
+    "items": [
+      "Facial recognition",
+      "Fingerprint recognition",
+      "QR scan",
+      "RFID card"
+    ]
+  },
+
+  "TurnstileServicesCicyleSection": {
+    "titles": [
+      "Our turnstile services, from sales to maintenance",
+      "Our company not only sells turnstiles, but also provides their professional maintenance, freeing you from technical problems and guaranteeing the uninterrupted operation of the equipment."
+    ],
+    "items": [
+      "Installation of turnstiles",
+      "Regular technical inspections",
+      "Individual solutions to your problems",
+      "Software updates"
+    ],
+    "btn": "Free consultation"
+  },
+
+  "AdminPanelScreenSection": {
+    "titles": [
+      "Track the entry and exit of your employees",
+      "Our turnstile systems allow you to easily and accurately track the entry and exit of your employees, providing a high level of control."
+    ]
+  },
+
+  "DeviceSection": {
+    "titleTurnstilePage": "You can also find us here.",
+    "titleHomePage": "Security systems",
+    "descriptionHomePage": "We offer a wide range of security systems suitable for both homes and business premises.",
+    "descriptionTurnstilePage": "We offer a wide range of security systems suitable for both homes and business premises.",
+    "items": [
+      "Facial recognition devices",
+      "QR scanning devices",
+      "Parking management"
+    ]
+  },
+
+  "OurWorksSection": {
+    "title": "Our works",
+    "items": [
+      "Turnstile designed for supermarkets",
+      "Turnstile designed for offices",
+      "Outdoor Turnstile with Face Recognition: Secure and Smart Access Control System",
+      "Turnstile Sales: The Best Solutions for Your Company's Security and Management",
+      "Employee Monitoring Device with Face Recognition and QR Scanning Capability",
+      "Demonstration of a Unified Ticketing System with QR Ticket Entry",
+      "Yerevan History Museum",
+      "Access Restriction System with Turnstile"
+    ]
+  },
+
+  "ContactSection": {
+    "title": "Fill in the fields to get a consultation.",
+    "placeholders": [
+      "Full Name*",
+      "Phone number*",
+      "Email*",
+      "Organization name",
+      "Attach file",
+      "Description"
+    ],
+
+    "validations": [
+      "Full Name is required!",
+      "Phone number is required!",
+      "Email is required!",
+      "Email format is incorrect."
+    ],
+
+    "btn": "Get a free consultation"
+  },
+
+  "FrequentlyAsked": {
+    "title": "Frequently asked questions",
+    "questions": [
+      {
+        "question": "How can I control the security system from my phone?",
+        "answer": "Our app allows you to control all your devices from one platform. You can turn the alarm on or off, view live camera feeds, and receive alerts about threats."
+      },
+      {
+        "question": "How does facial recognition technology work?",
+        "answer": "Մեր հավելվածը թույլ է տալիս վերահսկել բոլոր սարքերը մեկ հարթակից։ Կարող եք միացնել կամ անջատել ահազանգը, տեսնել տեսախցիկների կենդանի հոսքը և ստանալ ծանուցումներ վտանգի մասին։"
+      },
+      {
+        "question": "Can I manage systems in multiple locations at the same time?",
+        "answer": "Մեր հավելվածը թույլ է տալիս վերահսկել բոլոր սարքերը մեկ հարթակից։ Կարող եք միացնել կամ անջատել ահազանգը, տեսնել տեսախցիկների կենդանի հոսքը և ստանալ ծանուցումներ վտանգի մասին։"
+      },
+      {
+        "question": "Why are laser control systems effective?",
+        "answer": "Մեր հավելվածը թույլ է տալիս վերահսկել բոլոր սարքերը մեկ հարթակից։ Կարող եք միացնել կամ անջատել ահազանգը, տեսնել տեսախցիկների կենդանի հոսքը և ստանալ ծանուցումներ վտանգի մասին։"
+      },
+      {
+        "question": "Can I manage systems in multiple locations at the same time?",
+        "answer": "Մեր հավելվածը թույլ է տալիս վերահսկել բոլոր սարքերը մեկ հարթակից։ Կարող եք միացնել կամ անջատել ահազանգը, տեսնել տեսախցիկների կենդանի հոսքը և ստանալ ծանուցումներ վտանգի մասին։"
+      }
+    ]
+  },
+
+  "SecuritySystemsBanner": {
+    "title": "Overall Security Management of the Area through Your Phone",
+    "description": "Smart solutions for barriers, vehicle recognition, facial recognition, alarm activation, and more.",
+    "btn": "Find the solution."
+  },
+
+  "MobileAppSection":{
+    "title" : "Download our app."
+  },
+
+  "WhyChooseUsSection" : {
+    "title" : "Why choose us?",
+    "list" : [
+        "Customized solutions for your space and business needs.",
+        "Innovative technologies integrated with any infrastructure.",
+        "Data security with strict confidentiality.",
+        "Reliability and long-term support."
+    ]
+   },
+
+   "SecurityInfoSection" :{
+        "firstTitle" : "Stay Connected with Your Security System.",
+        "secondTitle" : "Alarm Activation.",
+        "firstParagraph" : "With our advanced solutions, you can monitor your space's security from anywhere. Use our convenient app or website to view, respond, and control your system instantly. Stay connected to your devices in real time, whether you're at home or on the go.",
+        "secondParagraph" : "Respond immediately to any threat with alarm activation. Our system is designed to notify you of danger through sound, light, and remote alerts. With additional integration, you can activate or deactivate the alarm from your phone without being on-site.",
+        "firstList" : {
+            "title" : "Features:",
+            "list"  : [
+                "Live video streaming.",
+                "Security status check.",
+                "Alerts in case of danger.",
+                "User-friendly interface with compatibility across all devices."
+            ]
+        },
+        "secondList" : {
+            "title" : "Features:",
+            "list" : [
+                "Visual and audio signals.",
+                "Remote control capability.",
+                "Automatic noise detection.",
+                "Active status of the area."
+            ]
+        }
+
     },
 
-    "NavMenu": {
-        "home": "Home",
-        "turnstile": "Turnstile",
-        "security-systems": "Security Systems",
-        "smart-home": "Smart Home",
-        "about-us": "About Us",
-        "catalog": "Our Products"
-    },
-
-    "NavTop": {
-        "address": "Baghramyan st. 79, 1/1"
-    },
-
-    "TurnstileBanner": {
-        "title": "The best solutions for your access control",
-        "content": "Choose high-quality turnstiles for any area, tailored to your needs.",
-        "see_more_btn": "View the range",
-        "dawnload_pdf_btn": "Download price list",
-        "bannerItems": [
-            "Durability: long-term use",
-            "Maintaining order",
-            "Modern design and technology",
-            "Increased security"
-        ]
-    },
-
-    "BannerList": {
-        "title": "Our Range",
-        "text": "We offer entrance security and control systems that allow you to:",
-        "list": [
-            "Block entry for unauthorized individuals.",
-            "Allow employees or authorized persons to enter using QR codes, RFID cards, FaceID devices, and fingerprint scanners.",
-            "Monitor employees' entry and exit dates and times.",
-            "Generate reports on employees' entry and exit data for different time periods (month, quarter, year).",
-            "Control visitor access with the ability to limit the number of entries. In addition, we implement other features and functionalities in the system according to the client's needs."
-        ]
-    },
-
-    "OurProductsSection": {
-        "title": "Our Products",
-        "title2": "Entry Systems",
-        "see_more_btn": "View the range",
-        "order_btn": "Order"
-    },
-
-    "QrScanSection": {
-        "title": "QR code scanner",
-        "description": "If there is no opportunity or space to install a turnstile, we offer you the perfect solution: a QR scanning device that will make your space more organized and convenient.",
-        "advantages": [
-            "Convenient and simple installation. The device is easily attached to the wall and does not take up unnecessary space.",
-            "Compact design: A minimalist solution that blends in with any interior.",
-            "Functionality: Fast and accurate QR code scanning for access control or other processes.",
-            "Cost-effective solution: Get the same effective control without the need to install a turnstile."
+    "OurSolutionsSection" : {
+        "title" : "Our Solutions.",
+        "btn" : "Details.",
+        "itemTitles" : [
+            "Barrier Control.",
+            "Vehicle Recognition.",
+            "Facial Recognition.",
+            "Infrared Rays.",
+            "Laser Control.",
+            "Vehicle Recognition.",
+            "Facial Recognition.",
+            "Infrared Rays."
         ],
-        "order": "Order"
-    },
-
-    "MadeInArmeniaSection": {
-        "title": "Made in Armenia",
-        "description": "We offer a wide range of turnstiles that suit different needs and environments, from offices to high-traffic public areas. Our products are manufactured in Armenia, ensuring high quality and competitive prices. Turnstiles are suitable for both security and law enforcement. We also offer customized solutions to meet your requirements.",
-        "view_more_btn": "View the range"
-    },
-
-    "TurnstileInfoSection": {
-        "title": "Your Reliable Choice of Turnstiles",
-        "description": "The turnstiles are equipped with the latest technologies: card, QR code and facial recognition systems. They are made of high-quality materials, ensuring durability and long-term use. Our products provide easy installation, technical support and affordable prices to meet the needs of any business.",
-        "view_more_btn": "View the range"
-    },
-
-    "ServicesSection": {
-        "titles": [
-            "With all types of systems",
-            "These features make turnstiles an ideal solution for various areas to ensure safety and efficiency."
-        ],
-        "items": [
-            "Facial recognition",
-            "Fingerprint recognition",
-            "QR scan",
-            "RFID card"
+        "itemDescriptions" : [
+            "Use your phone for the automatic opening and closing of barriers. Our systems ensure quick response, motion control, and precise data collection.",
+            "Smart vehicle recognition solutions enable automated entry and exit, while artificial intelligence records license plates and driving patterns.",
+            "Facial recognition technology provides a high level of security by allowing entry only to authorized individuals, preventing unauthorized access.",
+            "Security solutions with infrared rays are perfect for large areas. They provide motion detection and alert systems, allowing you to respond directly from your phone.",
+            "Laser-based security solutions are ideal for large areas. They provide motion detection and alert systems, allowing you to respond directly from your phone.",
+            "Smart vehicle recognition solutions enable automated entry and exit, while artificial intelligence records license plates and driving patterns.",
+            "Facial recognition technology provides a high level of security by allowing entry only to authorized individuals, preventing unauthorized access.",
+            "Infrared-ray security solutions are excellent for large areas. They provide motion detection and alert systems, allowing you to respond directly from your phone."
         ]
     },
 
-    "TurnstileServicesCicyleSection": {
-        "titles": [
-            "Our turnstile services, from sales to maintenance",
-            "Our company not only sells turnstiles, but also provides their professional maintenance, freeing you from technical problems and guaranteeing the uninterrupted operation of the equipment."
-        ],
-        "items": [
-            "Installation of turnstiles",
-            "Regular technical inspections",
-            "Individual solutions to your problems",
-            "Software updates"
-        ],
-        "btn": "Free consultation"
-    },
-
-    "AdminPanelScreenSection": {
-        "titles": [
-            "Track the entry and exit of your employees",
-            "Our turnstile systems allow you to easily and accurately track the entry and exit of your employees, providing a high level of control."
-        ]
-    },
-
-    "DeviceSection": {
-        "titleTurnstilePage": "You can also find us here.",
-        "titleHomePage": "Security systems",
-        "descriptionHomePage": "We offer a wide range of security systems suitable for both homes and business premises.",
-        "descriptionTurnstilePage":  "We offer a wide range of security systems suitable for both homes and business premises.",
-        "items": [
-            "Facial recognition devices",
-            "QR scanning devices",
-            "Parking management"
-        ]
-    },
-
-    "OurWorksSection": {
-        "title": "Our works",
-        "items": [
-            "Turnstile designed for supermarkets",
-            "Turnstile designed for offices",
-            "Outdoor Turnstile with Face Recognition: Secure and Smart Access Control System",
-            "Turnstile Sales: The Best Solutions for Your Company's Security and Management",
-            "Employee Monitoring Device with Face Recognition and QR Scanning Capability",
-            "Demonstration of a Unified Ticketing System with QR Ticket Entry",
-            "Yerevan History Museum",
-            "Access Restriction System with Turnstile"
-        ]
-    },
-
-    "ContactSection": {
-        "title": "Fill in the fields to get a consultation.",
-        "placeholders": [
-            "Full Name*",
-            "Phone number*",
-            "Email*",
-            "Organization name",
-            "Attach file",
-            "Description"
-        ],
-
-        "validations": [
-            "Full Name is required!",
-            "Phone number is required!",
-            "Email is required!",
-            "Email format is incorrect."
-        ],
-
-        "btn": "Get a free consultation"
-    },
-
-    "FrequentlyAsked" : {
-        "title" : "Frequently asked questions",
-        "questions" : [
-            {
-                "question" : "How can I control the security system from my phone?",
-                "answer" : "Our app allows you to control all your devices from one platform. You can turn the alarm on or off, view live camera feeds, and receive alerts about threats."
-            },
-            {
-                "question" : "How does facial recognition technology work?",
-                "answer" : "Մեր հավելվածը թույլ է տալիս վերահսկել բոլոր սարքերը մեկ հարթակից։ Կարող եք միացնել կամ անջատել ահազանգը, տեսնել տեսախցիկների կենդանի հոսքը և ստանալ ծանուցումներ վտանգի մասին։"
-            },
-            {
-                "question" : "Can I manage systems in multiple locations at the same time?",
-                "answer" : "Մեր հավելվածը թույլ է տալիս վերահսկել բոլոր սարքերը մեկ հարթակից։ Կարող եք միացնել կամ անջատել ահազանգը, տեսնել տեսախցիկների կենդանի հոսքը և ստանալ ծանուցումներ վտանգի մասին։"
-            },
-            {
-                "question" : "Why are laser control systems effective?",
-                "answer" : "Մեր հավելվածը թույլ է տալիս վերահսկել բոլոր սարքերը մեկ հարթակից։ Կարող եք միացնել կամ անջատել ահազանգը, տեսնել տեսախցիկների կենդանի հոսքը և ստանալ ծանուցումներ վտանգի մասին։"
-            },
-            {
-                "question" : "Can I manage systems in multiple locations at the same time?",
-                "answer" : "Մեր հավելվածը թույլ է տալիս վերահսկել բոլոր սարքերը մեկ հարթակից։ Կարող եք միացնել կամ անջատել ահազանգը, տեսնել տեսախցիկների կենդանի հոսքը և ստանալ ծանուցումներ վտանգի մասին։"
-            }
-        ]
-    }
+    "CategorySection" : {
+      "btn" : "More",
+      "items" : [
+          {
+              "title" : "Smart home",
+              "description" : "Automate everything, from lights to curtains"
+          },
+          {
+              "title" : "Security systems",
+              "description" : "Monitor everything happening in your home or workplace through your phone"
+          },
+          {
+              "title" : "Access control systems",
+              "description" : "Our turnstile systems allow you to easily and accurately monitor your employees' entry and exit, ensuring a high level of control."
+          }
+      ]
+  }
 }

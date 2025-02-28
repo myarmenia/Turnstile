@@ -11,6 +11,7 @@ import ButtonComponent from '../ButtonComponent/ButtonComponent';
 import home_banner_img1 from '@/public/images/home_banner_img1.png'
 import home_banner_img2 from '@/public/images/home_banner_img2.png'
 import home_banner_img3 from '@/public/images/home_banner_img3.png'
+import { useTranslations } from 'next-intl';
 
 interface IBannerItem {
     id: string;
@@ -21,24 +22,26 @@ interface IBannerItem {
 
 
 const HomePageBanner: React.FC  = () => {
+    const t = useTranslations("HomePageCarousel")
+
     const bannerSliderData: IBannerItem[] = [
         {
           id: '1',
           image: home_banner_img1.src,
-          title: 'Բարձրացրեք ձեր turnstile անվտանգության և վերահսկողությունը մեր լուծումներով',
-          description: 'Մեր առաջարկում ենք լուծումներ, որոնք պաշտպանելու են ձեր տարածքը անցանկալի մուտքից։',
+          title: t("titles.0"),
+          description: t("paragraphs.0"),
         },
         {
           id: '2',
           image: home_banner_img2.src,
-          title: 'Turnstile Համակարգեր',
-          description: 'Նախագծված հարմարավետության և անվտանգության համար',
+          title: t("titles.1"),
+          description: t("paragraphs.1"),
         },
         {
           id: '3',
           image: home_banner_img3.src,
-          title: 'Անվտանգություն և հարմարավետություն',
-          description: 'Մեր լուծումները ապահովում են անվտանգություն և հարմարավետություն բոլոր իրավիճակներում։',
+          title: t("titles.2"),
+          description: t("paragraphs.2"),
         },
       ];
     return (
@@ -67,7 +70,7 @@ const HomePageBanner: React.FC  = () => {
                                     </p>
 
                                     <ButtonComponent
-                                        name="Ստանալ Խորհրդատվություն"
+                                        name={t("buttonText")}
                                         path="/calendar"
                                         bg="#5939F5"
                                         color="#FFFFFF"
