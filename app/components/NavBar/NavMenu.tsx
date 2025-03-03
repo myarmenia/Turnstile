@@ -9,8 +9,8 @@ const NavMenu = () => {
         <NavMenuItem name={t('home')} path="/" />
         <NavMenuItem name={t('turnstile')} path="/turnstile" />
         <NavMenuItem name={t('security-systems')} path="/security-systems" />
-        <NavMenuItem name={t('smart-home')} path="/smart-home" />
-        <NavMenuItem name={t('about-us')} path="/about-us" />
+        {/* <NavMenuItem name={t('smart-home')} path="/smart-home" />
+        <NavMenuItem name={t('about-us')} path="/about-us" /> */}
         <NavMenuItem name={t('catalog')} path="/catalog" />
     </ul>
   )

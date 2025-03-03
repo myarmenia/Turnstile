@@ -6,8 +6,8 @@ import pz_14_img from '@/public/images/PZ-14.png';
 import pz_3_img from '@/public/images/PZ-3.png';
 import pz_4_img from '@/public/images/PZ-4.png';
 import Image, { StaticImageData } from 'next/image';
-import { OneSidedTurnstileIcon } from '@/app/icons/OneSidedTurnstileIcon';
-import { TwoSidedTurnstileIcon } from '@/app/icons/TwoSidedTurnstileIcon';
+// import { OneSidedTurnstileIcon } from '@/app/icons/OneSidedTurnstileIcon';
+// import { TwoSidedTurnstileIcon } from '@/app/icons/TwoSidedTurnstileIcon';
 import ButtonComponent from '../ButtonComponent/ButtonComponent';
 import { useTranslations } from 'next-intl';
 import ButtonParrentComponent from '../ButtonParrentComponent/ButtonParrentComponent';
@@ -86,7 +86,7 @@ const OurProductsSection = ({ title }: { title: string }) => {
                 <h3 className="freeSans font_color font-normal text-[16px] leading-[19.2px] text-center">
                   {item.code}
                 </h3>
-                <div className="flex items-center gap-[15px] w-full justify-center">
+                {/* <div className="flex items-center gap-[15px] w-full justify-center">
                   {item?.price1 && (
                     <div className="flex gap-2">
                       <OneSidedTurnstileIcon
@@ -116,7 +116,7 @@ const OurProductsSection = ({ title }: { title: string }) => {
                       </span>
                     </div>
                   )}
-                </div>
+                </div> */}
                 <ButtonComponent
                   name={t('order_btn')}
                   bg="transparent"

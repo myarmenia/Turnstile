@@ -5,7 +5,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { BottomArrowIcon } from '@/app/icons/BottomArrowIcon';
 
 const SelectLng = () => {
-  const [currentLng, setCurrentLng] = useState('en'); // Default language
+  const [currentLng, setCurrentLng] = useState('am'); // Default language
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
@@ -26,7 +26,7 @@ const SelectLng = () => {
   };
 
   useEffect(() => {
-    const savedLang = getCookie('lang') || 'en'; // Get language from cookies if available
+    const savedLang = getCookie('lang') || 'am'; // Get language from cookies if available
     setCurrentLng(savedLang);
   }, []); // Runs only once after initial render (client-side)
 
@@ -37,6 +37,8 @@ const SelectLng = () => {
     setCookie('lang', lng, 365); // Store the language in cookies for 1 year
     router.push(`/${lng}${slicePathname}`); // Navigate to the new language route
   };
+  console.log("----",currentLng);
+  
 
   return (
     <div className="relative">

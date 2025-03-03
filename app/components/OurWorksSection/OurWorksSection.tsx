@@ -1,10 +1,16 @@
 import { LineIcon } from '@/app/icons/LineIcon'
 import React from 'react'
-import Pz3Img from '@/public/images//PZ-3.png'
 import ourWorksBackground from '@/public/images/our_works_sectionBackground.png'
 import VideoComponent from '../VideoComonent/VideoComonent'
 import { useTranslations } from 'next-intl'
 import { StaticImageData } from 'next/image'
+import PZS3_img from '@/public/images/PZS-03.jpg'
+import PZ20_img from '@/public/images/PZ-20.jpg'
+import PZ14_img from '@/public/images/PZ-14.png'
+import PZ9_img from "@/public/images/PZ-9.jpeg"
+import PZ17_img from "@/public/images/PZ-17.jpg"
+import PZ21_img from "@/public/images/PZ-21.jpg"
+
 
 interface IOurWorksItem {
     id: string,
@@ -18,58 +24,65 @@ const OurWorksSection = () => {
         {
             id: '1',
             title: t('items.0'),
-            img: Pz3Img,
-            video: '/videos/example.mp4'
+            img: PZS3_img,
+            video: 'https://www.youtube.com/watch?v=px_KGl8500Y'
         },
 
         {
             id: '2',
             title: t('items.1'),
-            img: Pz3Img,
-            video: '/videos/example.mp4'
+            img: PZ9_img,
+            video: 'https://www.youtube.com/watch?v=lUzoVbEifyI&t=17s'
         },
 
         {
             id: '3',
             title: t('items.2'),
-            img: Pz3Img,
-            video: '/videos/example.mp4'
+            img: PZ14_img,
+            video: 'https://www.youtube.com/watch?v=qIpvQ2NfKG4'
         },
 
         {
             id: '4',
             title: t('items.3'),
-            img: Pz3Img,
-            video: '/videos/example.mp4'
+            img: PZ20_img,
+            video: 'https://www.youtube.com/watch?v=2h6m9jsOMKg'
         },
 
         {
             id: '5',
             title: t('items.4'),
-            img: Pz3Img,
-            video: '/videos/example.mp4'
+            img: PZ17_img,
+            video: 'https://www.youtube.com/watch?v=fLCiFFd-lwY'
         },
 
         {
             id: '6',
             title:t('items.5'),
-            img: Pz3Img,
-            video: '/videos/example.mp4'
+            img: PZ14_img,
+            video: 'https://www.youtube.com/watch?v=jUjcHnsi_lM'
         },
 
         {
             id: '7',
             title: t('items.6'),
-            img: Pz3Img,
-            video: '/videos/example.mp4'
+            img: PZ9_img,
+            video: 'https://www.youtube.com/shorts/CyAOfjen7rw'
         },
 
         {
             id: '8',
             title: t('items.7'),
-            img: Pz3Img,
-            video: '/videos/example.mp4'
-        }
+            img: PZ21_img,
+            video: 'https://www.youtube.com/shorts/AdPDWTufDOI'
+        },
+
+        // {
+        //     id: '8',
+        //     title: t('items.7'),
+        //     img: Pz3Img,
+        //     video: '/videos/example.mp4'
+        // }
     ]
     return (
         <div className='our_works_section pt-[50px] flex flex-col gap-[50px] justify-center items-center'>
@@ -82,7 +95,7 @@ const OurWorksSection = () => {
             </div>
 
             <div style={{ backgroundImage: `url(${ourWorksBackground.src})` }} className='bg-cover bg-center bg-no-repeat px-[50px] max-sm:px-[10px] py-[70px] w-full'>
-                <div className="container w-full flex flex-wrap justify-center gap-[20px]">
+                <div className="container w-full flex flex-wrap justify-center gap-[20px] items-start">
                     {
                         our_works_data.map((work) => (
                             <div key={work.id} className='flex flex-col gap-[10px] w-[300px] justify-center rounded overflow-hidden'>

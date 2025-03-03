@@ -26,7 +26,7 @@ const BottomMenu = () => {
     }, [])
 
     return (
-        <div className='sm:hidden h-[60px] bg-white w-full fixed bottom-0 z-30 flex justify-between items-center px-[30px] shadow-2xl shadow-black'>
+        <div className='sm:hidden h-[80px] bg-white w-full fixed bottom-0 z-30 flex justify-between items-center px-[30px]  shadow-2xl shadow-black'>
             <a
                 href="https://www.google.com/maps/place/79+%D5%84%D5%A1%D6%80%D5%B7%D5%A1%D5%AC+%D4%B2%D5%A1%D5%B2%D6%80%D5%A1%D5%B4%D5%B5%D5%A1%D5%B6%D5%AB+%D5%BA%D5%B8%D5%B2%D5%B8%D5%BF%D5%A1,+%D4%B5%D6%80%D6%87%D5%A1%D5%B6+0033/@40.1956465,44.4945423,17z/data=!3m1!4b1!4m6!3m5!1s0x406abd98a7cf7d11:0xfbd1c95b36d7c13!8m2!3d40.1956465!4d44.4945423!16s%2Fg%2F11y3x170zy?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
