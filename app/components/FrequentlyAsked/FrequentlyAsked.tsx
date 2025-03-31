@@ -54,6 +54,36 @@ import { useTranslations } from "next-intl"
               {t("questions.4.answer")}
           </AccordionContent>
         </AccordionItem>
+        <AccordionItem value="item-6" className="px-5 py-3 relative z-20">
+          <AccordionTrigger>{t("questions.5.question")}</AccordionTrigger>
+          <AccordionContent className="w-[80%] text-justify">
+              {t("questions.5.answer")}
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-7" className="px-5 py-3 relative z-20">
+          <AccordionTrigger>{t("questions.6.question")}</AccordionTrigger>
+          <AccordionContent className="w-[80%] text-justify">
+              {t("questions.6.answer")}
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-8" className="px-5 py-3 relative z-20">
+          <AccordionTrigger>{t("questions.7.question")}</AccordionTrigger>
+          <AccordionContent className="w-[80%] text-justify">
+              {t("questions.7.answer")}
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-9" className="px-5 py-3 relative z-20">
+          <AccordionTrigger>{t("questions.8.question")}</AccordionTrigger>
+          <AccordionContent className="w-[80%] text-justify">
+              {t("questions.8.answer")}
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="item-10" className="px-5 py-3 relative z-20">
+          <AccordionTrigger>{t("questions.9.question")}</AccordionTrigger>
+          <AccordionContent className="w-[80%] text-justify">
+              {t("questions.9.answer")}
+          </AccordionContent>
+        </AccordionItem>
       </Accordion>
       </div>
       <div className="absolute -left-[1.5%] top-[40%] z-10 max-md:hidden"><QuestionIcon width={130} height={200} rotate={-80}/></div>

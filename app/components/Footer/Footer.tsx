@@ -15,6 +15,11 @@ const Footer = () => {
         <div className='footer bg-[#0E0449] p-[50px] max-sm:pb-[100px] max-sm:px-[20px]'>
             <div className="container flex justify-between flex-wrap gap-[20px]">
                 <div className='flex flex-col gap-[30px]'>
+                    <h2 className='freeSans text-white text-[20px]'>
+                        {t('create_by_webex.0')}
+                        <a href="https://www.webex.am/am/" target='_blanc' className=' underline'>{t('create_by_webex.1')}</a>
+                        {t('create_by_webex.2')}
+                    </h2>
                     <Image src={footerLogo} alt='Webex.am' className='w-[100px]' />
 
                     <div className='flex items-center gap-[10px]'>
@@ -36,9 +41,9 @@ const Footer = () => {
                     </div>
 
                     <div className='flex items-center gap-[20px]'>
-                        <span className='w-[43px] h-[43px] flex justify-center items-center border border-white rounded'><FbIcon /></span>
-                        <span className='w-[43px] h-[43px] flex justify-center items-center border border-white rounded'><InstagramIcon /></span>
-                        <span className='w-[43px] h-[43px] flex justify-center items-center border border-white rounded'><LinkedinIcon /></span>
+                        <a href='https://www.facebook.com/people/%D5%8F%D5%B8%D6%82%D5%BC%D5%B6%D5%AB%D5%AF%D5%A5%D5%BF%D5%B6%D5%A5%D6%80%D5%AB-%D5%BE%D5%A1%D5%B3%D5%A1%D5%BC%D6%84/61562110601452/' target='_blanc' className='w-[43px] h-[43px] flex justify-center items-center border border-white rounded'><FbIcon /></a>
+                        <a href='https://www.instagram.com/web_ex.tech/' target='_blanc' className='w-[43px] h-[43px] flex justify-center items-center border border-white rounded'><InstagramIcon /></a>
+                        <a href='https://www.linkedin.com/groups/13856890/' target='_blanc' className='w-[43px] h-[43px] flex justify-center items-center border border-white rounded'><LinkedinIcon /></a>
                     </div>
                 </div>
 
@@ -46,9 +51,7 @@ const Footer = () => {
                     <NavMenuItem name={t('NavMenu.home')} path="/"  color="white"/>
                     <NavMenuItem name={t('NavMenu.turnstile')} path="/turnstile"  color="white"/>
                     <NavMenuItem name={t('NavMenu.security-systems')} path="/security-systems"  color="white"/>
-                    <NavMenuItem name={t('NavMenu.smart-home')} path="/smart-home"  color="white"/>
-                    <NavMenuItem name={t('NavMenu.about-us')} path="/about-us" color="white" />
-                    <NavMenuItem name={t('NavMenu.catalog')} path="/contact-us"  color="white"/>
+                    <NavMenuItem name={t('NavMenu.catalog')} path="/catalog"  color="white"/>
                 </ul>
             </div>
         </div>

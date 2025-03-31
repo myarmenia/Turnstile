@@ -1,0 +1,14 @@
+# *
+User-agent: *
+Allow:/
+Allow: /catalog
+Allow: /turnstile
+Allow: /security-systems
+
+
+
+# Host
+Host: https://turniket.am
+
+# Sitemaps
+Sitemap: https://turniket.am/sitemap.xml

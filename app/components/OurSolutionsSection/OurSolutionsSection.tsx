@@ -5,8 +5,6 @@ import { ShlaqBawnScanIcon } from '@/app/icons/ShlaqBawnScanIcon'
 import { CarScanIcon } from '@/app/icons/CarScanIcon'
 import { FaceScanIcon } from '@/app/icons/FaceScanIcon'
 import { EyeScanIcon } from '@/app/icons/EyeScanIcon'
-import Link from 'next/link'
-import { RightChvronIcon } from '@/app/icons/RightChvronIcon'
 import { useTranslations } from 'next-intl'
 
 interface SolutionItem {
@@ -107,10 +105,10 @@ const OurSolutionsSection = () => {
                                 <span>{solution.icon}</span>
                                 <h3 className='text-[20px] font_color font-semibold freeSans leading-[24px] text-center'>{solution.title}</h3>
                                 <p className='text-center font-normal freeSans text-[16px] leading-[24px] font_color'>{solution.description}</p>
-                                <Link href={solution.route} className='text-[16px] text-[#5939F5] font-normal freeSans leading-[24px] text-center uppercase hover:text-blue-700 flex items-center gap-1'>
+                                {/* <Link href={solution.route} className='text-[16px] text-[#5939F5] font-normal freeSans leading-[24px] text-center uppercase hover:text-blue-700 flex items-center gap-1'>
                                     <span>{t("btn")}</span>
                                     <RightChvronIcon/> 
-                                </Link>
+                                </Link> */}
                             </div>
                         ))
                     }

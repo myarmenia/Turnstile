@@ -15,7 +15,8 @@ import { TurnstileIcon } from '@/app/icons/TurnstileIcon';
 import { SecurityIcon } from '@/app/icons/SecurityIcon';
 import bannerBackground from '@/public/images/turnstileBannerBachgroundImage.png';
 import React, { ReactNode } from 'react'
-import { useTranslations } from 'next-intl'
+import { useTranslations} from 'next-intl'
+import { Metadata } from 'next'
 
 interface BannerItem {
     id: string
@@ -29,13 +30,26 @@ interface IBannerContent {
   btn: string;
 }
 
- const TurnstilePage = () => {
+export const metadata: Metadata = {
+    title: 'Տուրնիկետներ | Turnstiles | Турникеты',
+    description: 'Մենք առաջարկում ենք բարձրորակ տուրնիկետներ՝ նախատեսված անցումների վերահսկման համար: Մեր արտադրանքը ներառում է ժամանակակից տեխնոլոգիաներ, դիմացկունություն և անվտանգություն: Արագ տեղադրում և մասնագիտական աջակցություն: Наши турникеты обеспечивают надежный контроль доступа. Современные технологии, долговечность и безопасность. Быстрая установка и профессиональная поддержка. Our turnstiles provide reliable access control. Modern technologies, durability, and security. Fast installation and professional support. turniket gnel | turniketner vacharq | mutqi hamakarg | տուռնիկետ տուռնիկետների վաճառք | տուռնիկետներ գնել մուտքի համակարգ | անվտանգության համակարգ | турникеты ереван | турникет | купить турникет | продажа турникетов | система безопасности',
+    alternates: {
+        canonical: 'https://turniket.am/',
+        languages: {
+          'am': 'https://turniket.am/am/turnstile',
+          'en': 'https://turniket.am/en/turnstile',
+        },
+      },
+  };
+
+const TurnstilePage = () => {
    const t = useTranslations('');
     const bannerContent: IBannerContent = {
         title: t('TurnstileBanner.title'),
         description: t('TurnstileBanner.content'),
         btn: t('TurnstileBanner.see_more_btn')
     };
+
     
       const bannerItemsData: BannerItem[] = [
           {   
@@ -65,7 +79,8 @@ interface IBannerContent {
       ];
 
   return (
-    <div className='turnstile_page'>
+
+      <div className='turnstile_page'>
         <Banner bannerData={bannerItemsData} bg={bannerBackground.src} content={bannerContent} page="turnstile"/>
         <OurProductsSection title="title"/>
         <QrScanSection/>
@@ -77,8 +92,8 @@ interface IBannerContent {
         <DeviceSection title="titleTurnstilePage" description="descriptionTurnstilePage"/>
         <OurWorksSection/>
         <ContactSection/>
-    </div>
-  )
-}
+      </div>
+  );
+};
 
-export default TurnstilePage
+export default TurnstilePage;

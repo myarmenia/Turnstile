@@ -3,8 +3,8 @@ import categorySmartHomeImg from '@/public/images/category_section_smart_homeImg
 import categorySecuritySystemsImg from '@/public/images/category_section_securitySystemsImg.png'
 import categoryTurnstileImg from '@/public/images/category_section_turnstileImg.png'
 import { RightArrowIcon } from '@/app/icons/LeftArrowIcon';
-import ServerSideButton from '../ServerSideButton/ServerSideButton';
 import { useTranslations } from 'next-intl';
+import ButtonParrentComponent from '../ButtonParrentComponent/ButtonParrentComponent';
 
 
 interface ICategoryItem {
@@ -49,20 +49,14 @@ const CategorySection = () => {
             {
                 categoriesData.map((category: ICategoryItem) => (
                     <div key={category.id} className='category_item h-[648px] bg-cover bg-center bg-no-repeat' style={{ backgroundImage: `url(${category.bg})` }}>
-                        <div className={`container flex h-full items-center ${+category.id % 2 !== 0 ? 'justify-end' : 'justify-start'}`}>
+                        <div className={`container flex h-full items-center ${+category.id % 2 !== 0 ? 'justify-end' : 'justify-start'} pl-[30px]`}>
                             <div className='max-w-[300px] flex flex-col gap-[30px]'>
                                 <h3 className={`font-semibold text-[24px] leading-[32px] arm_Hmks_Bebas_Neue ${+category.id % 2 !== 0 ? "text-white" : "text-black"}`}>{category.title}</h3>
                                 <p className={`font-normal text-[22px] leading-[32px] freeSans ${+category.id % 2 !== 0 ? "text-white" : "text-black"}`}>{category.description}</p>
+                                
+
                                 {
-                                    category.id !== "1" && <ServerSideButton
-                                    name={t("btn")}
-                                    path={category.path}
-                                    bg="transparent"    
-                                    color={+category.id % 2 !== 0 ? "white" : "black"}
-                                    size="16px"
-                                    icon={<RightArrowIcon width={24} height={24} color={+category.id % 2 !== 0 ? "white" : "black"}/>}
-                                    customClass='category_btn_hover'
-                                    />
+                                  category.id !== "1" &&   <ButtonParrentComponent customClass="category_btn_hover"  btnText={t('btn')} bg="transparent" color={+category.id % 2 !== 0 ? "white" : "black"} border={false} size="16" icon={<RightArrowIcon width={24} height={24}  color={+category.id % 2 !== 0 ? "white" : "black"}/>}/>
                                 }
                             </div>
                         </div>

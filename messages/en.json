@@ -35,7 +35,7 @@
     "title": "The best solutions for your access control",
     "content": "Choose high-quality turnstiles for any area, tailored to your needs.",
     "see_more_btn": "View the range",
-    "dawnload_pdf_btn": "Download price list",
+    "dawnload_pdf_btn": "Get Prices",
     "bannerItems": [
       "Durability: long-term use",
       "Maintaining order",
@@ -152,7 +152,8 @@
       "Employee Monitoring Device with Face Recognition and QR Scanning Capability",
       "Demonstration of a Unified Ticketing System with QR Ticket Entry",
       "Yerevan History Museum",
-      "Access Restriction System with Turnstile"
+      "Access Restriction System with Turnstile",
+      "RFID card, QR, fingerprint, facial recognition turnstiles for museums, cinemas, theaters and other places"
     ]
   },
 
@@ -164,7 +165,11 @@
       "Email*",
       "Organization name",
       "Attach file",
-      "Description"
+      "Description",
+      "Choose a time that suits you.",
+      "Product",
+      "Message",
+      "Send"
     ],
 
     "validations": [
@@ -174,31 +179,56 @@
       "Email format is incorrect."
     ],
 
-    "btn": "Get a free consultation"
+    "btn": "Get a free consultation",
+
+    "message": {
+            "success" : "Your application has been successfully sent.",
+            "error" :  "Something is wrong."
+        }
   },
 
   "FrequentlyAsked": {
     "title": "Frequently asked questions",
     "questions": [
       {
-        "question": "How can I control the security system from my phone?",
-        "answer": "Our app allows you to control all your devices from one platform. You can turn the alarm on or off, view live camera feeds, and receive alerts about threats."
+        "question": "What is a turnstile and where is it used?",
+        "answer": "A turnstile is a device that restricts access to certain areas, ensuring security and control. It is often used in institutions, offices, events, and public transportation."
       },
       {
-        "question": "How does facial recognition technology work?",
-        "answer": "Մեր հավելվածը թույլ է տալիս վերահսկել բոլոր սարքերը մեկ հարթակից։ Կարող եք միացնել կամ անջատել ահազանգը, տեսնել տեսախցիկների կենդանի հոսքը և ստանալ ծանուցումներ վտանգի մասին։"
+        "question": "What types of turnstiles do you offer? ",
+        "answer": "We offer various types of turnstiles: rotary, full-height, tripod, and electronic turnstiles. Each type is suitable for different operating conditions and levels of security."
       },
       {
-        "question": "Can I manage systems in multiple locations at the same time?",
-        "answer": "Մեր հավելվածը թույլ է տալիս վերահսկել բոլոր սարքերը մեկ հարթակից։ Կարող եք միացնել կամ անջատել ահազանգը, տեսնել տեսախցիկների կենդանի հոսքը և ստանալ ծանուցումներ վտանգի մասին։"
+        "question": "What software is needed to manage turnstiles?",
+        "answer": "Specialized software is required to manage turnstiles, allowing control of access, tracking passages, and generating reports. We offer integrated solutions for managing all our devices"
       },
       {
-        "question": "Why are laser control systems effective?",
-        "answer": "Մեր հավելվածը թույլ է տալիս վերահսկել բոլոր սարքերը մեկ հարթակից։ Կարող եք միացնել կամ անջատել ահազանգը, տեսնել տեսախցիկների կենդանի հոսքը և ստանալ ծանուցումներ վտանգի մասին։"
+        "question": "How are turnstiles connected to the management system?",
+        "answer": "Turnstiles can be connected to the management system via Ethernet or RS-485. We provide all necessary instructions and technical support for installation."
       },
       {
-        "question": "Can I manage systems in multiple locations at the same time?",
-        "answer": "Մեր հավելվածը թույլ է տալիս վերահսկել բոլոր սարքերը մեկ հարթակից։ Կարող եք միացնել կամ անջատել ահազանգը, տեսնել տեսախցիկների կենդանի հոսքը և ստանալ ծանուցումներ վտանգի մասին։"
+        "question": "Can turnstiles be integrated with video surveillance systems? ",
+        "answer": " Yes, our turnstiles can be integrated with video surveillance systems to enhance security. This allows for tracking passages and recording video in real-time."
+      },
+      {
+        "question": "What is the warranty on turnstiles? ",
+        "answer": "All our turnstiles come with a 12-month warranty. We also offer maintenance and repair services after the warranty period expires."
+      },
+      {
+        "question": "How do I choose the right turnstile for my business?",
+        "answer": "The choice of a turnstile depends on your security needs, volume of passages, and characteristics of the premises. Our specialists are ready to help you find the optimal solution."
+      },
+      {
+        "question": "Do you provide installation services for turnstiles? ",
+        "answer": "Yes, we offer installation services for turnstiles. Our team of experienced specialists will ensure quality installation and setup of the equipment."
+      },
+      {
+        "question": "How can I order a turnstile and software?",
+        "answer": "You can order a turnstile and software through our website by filling out the order form or by contacting us by phone. We are also ready to answer all your questions."
+      },
+      {
+        "question": "Is there an option to test the equipment before purchase? ",
+        "answer": "Yes, we offer the opportunity to test certain models of turnstiles before purchase. Please contact our manager for more information about available options."
       }
     ]
   },
@@ -290,5 +320,17 @@
               "description" : "Our turnstile systems allow you to easily and accurately monitor your employees' entry and exit, ensuring a high level of control."
           }
       ]
-  }
+  },
+
+  "metadata": {
+        "title": "Turnstiles for Sale | Турникеты на продажу",
+        "description": "Our turnstile sales website provides innovative and reliable solutions for access control. Our range includes high-quality turnstiles that ensure security, efficiency, and convenience in various environments—from business centers to gyms and government institutions. High quality and durability | Modern design and technology |  Fast delivery and installation | Professional consultation -- Наш сайт продажи турникетов предлагает инновационные и надежные решения для контроля доступа. В нашем ассортименте есть высококачественные турникеты, которые обеспечивают безопасность, эффективность и удобство в различных средах — от бизнес-центров до спортивных залов и государственных учреждений. Высокое качество и долговечность | Современный дизайн и технологии | Быстрая доставка и установка | Профессиональные консультации"
+    },
+
+    "create_by_webex": [
+        "turniket.am is powered by ",
+        "Webex Technologies",
+        ""
+    ]
+
 }

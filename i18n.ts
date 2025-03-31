@@ -1,14 +1,22 @@
+
+
 import { getRequestConfig } from "next-intl/server";
 import { notFound } from "next/navigation";
 
 export const locales = ["am", "en"];
 
+export default getRequestConfig(async ({ requestLocale }: { requestLocale: Promise<string | undefined> }) => {
+  const resolvedLocale = await requestLocale; 
+  const locale = resolvedLocale && locales.includes(resolvedLocale) ? resolvedLocale : "en"; 
 
-export default getRequestConfig(async ({ locale }: { locale: string } ) => {
-    if (!locales.includes(locale as any)) {
-        notFound();
-      }
-    return {
-        messages: (await import(`/messages/${locale}.json`)).default,
-    };
+  if (!locales.includes(locale)) {
+    notFound();
+  }
+
+  return {
+    locale,
+    messages: (await import(`./messages/${locale}.json`)).default,
+  };
 });
+
+

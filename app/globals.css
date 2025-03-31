@@ -44,6 +44,30 @@
   .category_btn_hover:hover{
     color: #5939F5 !important;
   }
+
+
+  .custom_scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+
+  .custom_scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  
+  .custom_scrollbar::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  
+  .custom_scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555555c6; 
+  }
+
+
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;

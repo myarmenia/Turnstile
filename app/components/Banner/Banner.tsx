@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import { useTranslations } from 'next-intl';
 import ButtonParrentComponent from '../ButtonParrentComponent/ButtonParrentComponent';
 import BannerList from '../BannerList/BannerList';
+import ButtonComponent from '../ButtonComponent/ButtonComponent';
 
 interface BannerItem {
     id: string;
@@ -29,31 +30,38 @@ const Banner: React.FC<BannerProps> = ({ bannerData, bg, content, page }) => {
         <div className={`w-full ${page === 'turnstile' ? 'min-h-[850px] max-sm:min-h-[950px]' : 'min-h-[750px] max-sm:min-h-[750px]'}`}>
             <div
                 style={{ backgroundImage: `url(${bg})` }}
-                className={`w-full min-h-[650px] bg-cover bg-no-repeat bg-white bg-center max-md:p-2 relative ${page === "catalog" ? "flex items-center":""}`}
+                className={`w-full min-h-[650px] bg-cover bg-no-repeat bg-white bg-center max-md:p-2 relative ${page === "catalog" ? "flex items-center" : ""}`}
             >
                 {
                     page === "catalog" && <div className='w-full absolute left-0 top-0 h-full bg-[#000000bf] z-0'></div>
                 }
                 {
-                    page === "catalog" ? <BannerList/> : <div className="container h-full relative z-10">
-                    <div className="max-w-[530px] flex flex-col gap-[30px] h-full pt-[120px] px-[50px] max-sm:px-2">
-                        <h1 className="text-white text-[40px] max-md:text-[30px] leading-[48px] font-normal Arm_Hmks_Bebas_Neue">
-                            {content.title}
-                        </h1>
-                        <p className="text-[16px] text-white font-normal leading-[23.04px] freeSans">
-                            {content.description}
-                        </p>
+                    page === "catalog" ? <BannerList /> : <div className="container h-full relative z-10">
+                        <div className="max-w-[530px] flex flex-col gap-[30px] h-full pt-[120px] px-[50px] max-sm:px-2">
+                            <h1 className="text-white text-[40px] max-md:text-[30px] leading-[48px] font-normal Arm_Hmks_Bebas_Neue">
+                                {content.title}
+                            </h1>
+                            <p className="text-[16px] text-white font-normal leading-[23.04px] freeSans">
+                                {content.description}
+                            </p>
 
-                        {/* Buttons */}
-                        <div className="flex items-center gap-3">
-                            <ButtonParrentComponent btnText={content.btn} />
+                            {/* Buttons */}
+                            <div className="flex items-center gap-3">
+                                <ButtonParrentComponent btnText={content.btn} />
 
-                            <button className="bg-white py-[7px] px-[15px] text-[16px] text-black rounded-[4px] freeSans">
-                                {t('dawnload_pdf_btn')}
-                            </button>
+                                <ButtonComponent
+                                    name={t('dawnload_pdf_btn')}
+                                    bg="#ffff"
+                                    color="#00000"
+                                    size="16px"
+                                    py="7px"
+                                    px="15px"
+                                    order="0"
+                                />
+
+                            </div>
                         </div>
                     </div>
-                </div>
                 }
             </div>
 

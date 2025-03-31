@@ -1,11 +1,14 @@
 'use client'
-import React from 'react'
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import React  from 'react'
+import { Formik, Form, Field, ErrorMessage, FormikHelpers } from 'formik';
 import * as Yup from 'yup';
 import { XIcon } from '@/app/icons/XIcon';
 import { useAppDispatch, useAppSelector } from '@/app/hooks';
 import { selectIsOpenConsultingModal, selectOrderCode, toggleConsultingModal } from '@/app/store/slices/consultingModalSlice/consultingModalSlice';
 import { useSelector } from 'react-redux';
+import axios from 'axios';
+import { toast } from 'sonner';
+import { useTranslations } from 'next-intl';
 
 
 interface InitialValues {
@@ -20,6 +23,7 @@ const ConsultingModal = () => {
   const isOpenModal = useAppSelector(selectIsOpenConsultingModal)
   const orderCode = useSelector(selectOrderCode)
   const dispatch = useAppDispatch()
+  const t = useTranslations('ContactSection');
   const initialValues = {
     fullName: '',
     phone: '',
@@ -32,29 +36,51 @@ const ConsultingModal = () => {
   const validationSchema = Yup.object({
     fullName: Yup.string(),
     phone: Yup.string(),
-    email: Yup.string().email('validations.3').required('partadir'),
+    email: Yup.string().email(t('validations.3')).required(t('validations.2')),
     time: Yup.string(),
     product: Yup.string(),
     description: Yup.string(),
   });
 
-  const handleSubmit = (values: InitialValues) => {
+  const handleSubmit = async(values: InitialValues, { resetForm }: FormikHelpers<InitialValues>) => {
     console.log('Form Data:', values);
     // Add your form submission logic here
+    try {
+      const sendMessage = {
+        full_name: values.fullName,
+        phone: values.phone,
+        email: values.email,
+        product: orderCode,
+        description: values.description,
+        comfort_time: values.time
+      };
+
+      await axios.post('https://backend.turniket.am/send-email', sendMessage);
+
+      resetForm();
+      toast.success(t('message.success'));
+      dispatch(toggleConsultingModal({isview:false, orderCode: ''}))
+
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast.error(t('message.error'));
+    }
+    
   };
+
   return (
-    <div style={{display: isOpenModal ? 'flex' : 'none'}} className='consulting_modal fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-55 flex justify-center items-center z-[99999999]  '>
+    <div style={{display: isOpenModal ? 'flex' : 'none'}} className='consulting_modal fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-55 flex justify-center items-center z-[99999999] max-sm:items-start'>
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
           onSubmit={handleSubmit}
         >
           {() => (
-            <Form className="max-w-[860px] flex flex-col gap-[20px] justify-center items-center bg-white my_shadow p-[40px] max-sm:px-[10px] rounded-xl z-10 relative max-sm:h-[95vh] max-sm:gap-[2vh]">
+            <Form className="max-w-[860px] flex flex-col gap-[20px] justify-center max-sm:justify-start items-center bg-white my_shadow p-[40px] max-sm:px-[10px] rounded-xl z-10 relative max-sm:h-[600px] max-sm:gap-[2vh] overflow-y-auto overflow-x-hidden max-sm:mt-[30px] max-sm:custom_scrollbar">
               <div className="flex flex-col justify-center items-center md:items-start gap-[20px] md:flex-row ">
                 <div className="flex flex-col gap-[10px]">
                   <label className="freeSans font-normal text-[16px] leading-[24px] font_color">
-                     Անուն Ազգանուն*
+                     {t('placeholders.0')}
                   </label>
                   <Field
                     name="fullName"
@@ -65,7 +91,7 @@ const ConsultingModal = () => {
 
                 <div className="flex flex-col gap-[10px]">
                   <label className="freeSans font-normal text-[16px] leading-[24px] font_color">
-                      Հեռախոսահամար*
+                  {t('placeholders.1')}
                   </label>
                   <Field
                     name="phone"
@@ -78,7 +104,7 @@ const ConsultingModal = () => {
               <div className="flex flex-col justify-center gap-[20px] md:flex-row items-center md:items-start">
                 <div className="flex flex-col gap-[10px]">
                   <label className="freeSans font-normal text-[16px] leading-[24px] font_color">
-                    Էլ. փոստ*
+                  {t('placeholders.2')}
                   </label>
                   <Field
                     name="email"
@@ -94,7 +120,7 @@ const ConsultingModal = () => {
 
                 <div className="flex flex-col gap-[10px]">
                   <label className="freeSans font-normal text-[16px] leading-[24px] font_color">
-                    Ընտրեք Ձեզ հարմար ժամ
+                  {t('placeholders.6')}
                   </label>
                   <Field
                     name="time"
@@ -106,7 +132,7 @@ const ConsultingModal = () => {
 
               <div className="flex flex-col gap-[10px]">
                 <label className="freeSans font-normal text-[16px] leading-[24px] font_color">
-                  Ապրանք
+                {t('placeholders.7')}
                 </label>
                 <Field
                     value={orderCode || ''}
@@ -118,7 +144,7 @@ const ConsultingModal = () => {
 
               <div className="flex flex-col gap-[10px]">
                 <label className="freeSans font-normal text-[16px] leading-[24px] font_color">
-                  Հաղորդագրություն
+                {t('placeholders.8')}
                 </label>
                 <Field
                   name="description"
@@ -131,7 +157,7 @@ const ConsultingModal = () => {
                 type="submit"
                 className="text-white bg-[#5939F5] py-[7px] px-[15px] rounded"
               >
-                Ուղարկել
+                {t('placeholders.9')}
               </button>
               <span className='absolute right-3 top-3 cursor-pointer' onClick={() => dispatch(toggleConsultingModal({isview:false, orderCode: ''}))}><XIcon width={16} height={16} color="#3A3A3A"/></span>
             </Form>

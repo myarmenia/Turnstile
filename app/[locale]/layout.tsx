@@ -10,8 +10,8 @@ import StoreProvider from "../StoreProvider/StoreProvider";
 import BurgerMenu from "../components/BurgerMenu/BurgerMenu";
 import BottomMenu from "../components/BottomMenu/BottomMenu";
 import ConsultingModal from "../components/ConsultingModal/ConsultingModal";
+import { Toaster } from "sonner";
 
-// Load fonts
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -22,11 +22,31 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Metadata for the page
-export const metadata: Metadata = {
-  title: "Turnstile",
-  description: "Created by Webex.am",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const { locale } = params; 
+
+ 
+  const messages = await getMessages({ locale });
+
+  const metaObj = messages.metadata as {
+    title?: string;
+    description?: string;
+  };
+
+  return {
+    title: metaObj.title || "Default Title",
+    description: metaObj.description || "Default Description",
+    icons: {
+      icon: "/favicon.png",
+      shortcut: "/favicon.png",
+      apple: "/favicon.png",
+    },
+  };
+}
 
 // Root layout component
 export default async function RootLayout({
@@ -34,30 +54,32 @@ export default async function RootLayout({
   params, // Access route parameters, including `locale`
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string}; // Ensure `locale` is part of the structure
+  params: { locale: string }; // Ensure `locale` is part of the structure
 }>) {
-  const  {locale}  = await params;
-
-
-   // Await the params to ensure they are resolved
+  const { locale } = params; // Destructure params here
 
   // Get the messages for the current locale
-  const messages = await getMessages({locale:locale}); // Fetch messages for the given locale
-    
+  const messages = await getMessages({ locale });
+
+
+
   return (
     <html>
+      <head>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-      <StoreProvider>
+        <StoreProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <ConsultingModal/>
+            <Toaster />
+            <ConsultingModal />
             <NavTop />
             <NavBar />
-            <BurgerMenu/>
-            <BottomMenu/>
-              {children} 
-            <Footer/>
+            <BurgerMenu />
+            <BottomMenu />
+            {children}
+            <Footer />
           </NextIntlClientProvider>
-      </StoreProvider>
+        </StoreProvider>
       </body>
     </html>
   );

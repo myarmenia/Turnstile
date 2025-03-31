@@ -1,7 +1,7 @@
 
 import Image from 'next/image'
 import React from 'react'
-import logo from "../../../public/images/logo.png"
+import logo from "../../../public/images/navlogo.png"
 import NavMenu from './NavMenu'
 import SelectLng from '../SelectLng/SelectLng'
 import BurgerMenuIcon from './BurgerMenuIcon'

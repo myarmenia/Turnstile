@@ -1,8 +1,7 @@
-import { cookies } from 'next/headers';
+'use client'; // Add this line to make it a client component
+
 import Link from 'next/link';
-import React, { ReactNode } from 'react';
-
-
+import React, { ReactNode, useEffect, useState } from 'react';
 
 interface IButtonProps {
   name: string;
@@ -16,14 +15,24 @@ interface IButtonProps {
   icon?: ReactNode;
   customClass?: string;
 }
-const ServerSideButton = async ({ name, path, bg, color, size, py, px, width,icon, customClass}: IButtonProps) => {
+
+const ServerSideButton = ({ name, path, bg, color, size, py, px, width, icon, customClass }: IButtonProps) => {
+  const [lang, setLang] = useState('am');
+
+  useEffect(() => {
+    // Read the cookie on the client side
+    const cookieLang = document.cookie
+      .split('; ')
+      .find(row => row.startsWith('lang='))
+      ?.split('=')[1] || 'am';
+    setLang(cookieLang);
+  }, []);
+
   const currentPath = path && path !== '/calendar' ? `/${path}` : '';
-  const cookieStore = await cookies();
-  const lang = cookieStore.get('lang')?.value || 'am'; 
-  
 
   return (
-    <Link href={lang+currentPath}
+    <Link
+      href={`/${lang}${currentPath}`}
       style={{
         backgroundColor: bg,
         color: color,
@@ -32,11 +41,11 @@ const ServerSideButton = async ({ name, path, bg, color, size, py, px, width,ico
         padding: `${py} ${px}`,
         width: width,
       }}
-      className={`rounded-[4px] freeSans flex ${width ? 'justify-center' : 'justify-start'}  items-center  ${customClass}`}
+      className={`rounded-[4px] freeSans flex ${width ? 'justify-center' : 'justify-start'} items-center ${customClass}`}
     >
       {name}
-      {icon && <span className="ml-3 text-sm text-white">{icon} </span>}
-      </Link>
+      {icon && <span className="ml-3 text-sm text-white">{icon}</span>}
+    </Link>
   );
 };
 
