@@ -11,6 +11,8 @@ import BurgerMenu from "../components/BurgerMenu/BurgerMenu";
 import BottomMenu from "../components/BottomMenu/BottomMenu";
 import ConsultingModal from "../components/ConsultingModal/ConsultingModal";
 import { Toaster } from "sonner";
+import Analytics from '../components/Analytics' // Импорт
+import Script from 'next/script';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -66,10 +68,25 @@ export default async function RootLayout({
   return (
     <html>
       <head>
+        <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=G-XGYTB9SK6C`}
+            strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-XGYTB9SK6C', {
+                  page_path: window.location.pathname,
+                });
+            `}
+        </Script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <StoreProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
+            <Analytics />
             <Toaster />
             <ConsultingModal />
             <NavTop />

@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: 'freeSans';
-  src: url('../public//fonts/FreeSans.otf');
+  src: url('../public/fonts/FreeSans.otf');
 }
 
 @font-face {
   font-family: 'Arm_Hmks_Bebas_Neue';
-  src: url('../public//fonts/FreeSans.otf') format('opentype');
+  src: url('../public/fonts/FreeSans.otf') format('opentype');
 }
 
 @layer base {
@@ -127,9 +127,10 @@
   display: none !important; 
 }
 
-.swiper-button-prev, .swiper-button-next{
+.home_page_banner .swiper-button-prev, .home_page_banner .swiper-button-next{
   display: none !important;
 }
+
 
 @layer base {
   * {

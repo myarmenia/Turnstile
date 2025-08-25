@@ -3,7 +3,7 @@ import deviceSectionBackground from '@/public/images/deviceSectionImg.png'
 import { LineIcon } from '@/app/icons/LineIcon'
 import faceIdDeviceImg from '@/public/images/faceIdDeviceImg.png'
 import qrDeviceImg from '@/public/images/QrDeviceImg.png'
-import shlaqBawuDeviceImg from '@/public/images/shlaqBawnImg.png'
+import shelfDeviceImg from '@/public/images/TM11Img2.png'
 import Image, { StaticImageData } from 'next/image'
 import { useTranslations } from 'next-intl'
 interface IDevice {
@@ -33,7 +33,7 @@ const DeviceSection = ({title, description}: IProps) => {
         {
             id: '3',
             title: t('items.2'),
-            img: shlaqBawuDeviceImg
+            img: shelfDeviceImg
         }
     ]
     return (
@@ -55,7 +55,7 @@ const DeviceSection = ({title, description}: IProps) => {
                     {
                         deviceData.map((device: IDevice) => (
                             <div key={device.id} className='flex flex-col  gap-[10px] w-[400px] max-md:w-[300px] justify-center'>
-                                <Image src={device.img} alt='Device' />
+                                <Image src={device.img} alt='Device' className='w-full h-[250px] object-cover' />
                                 <p className='font_color font-normal text-[16px] leading-[24px] freeSans'>{device.title}</p>
                             </div>
                         ))

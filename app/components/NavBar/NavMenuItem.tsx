@@ -13,7 +13,6 @@ const NavMenuItem: React.FC<NavMenuItemProps> = ({ name, path, color }) => {
   const [lang, setLang] = useState('am');
 
   useEffect(() => {
-    // Կարդալ cookie-ն կլիենտի կողմում
     const cookieLang = document.cookie
       .split('; ')
       .find(row => row.startsWith('lang='))

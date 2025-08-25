@@ -1,3 +1,4 @@
+
 import Banner from '@/app/components/Banner/Banner';
 import catalogBanner from "@/public/images/catalogBanner.jpeg";
 import React from 'react';

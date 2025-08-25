@@ -47,13 +47,13 @@ const HomePageBanner: React.FC  = () => {
     return (
         <div className="home_page_banner h-[770px] bg-white">
             <Swiper
-                modules={[Pagination, Navigation, Autoplay]} // Add Autoplay to the modules
+                modules={[Pagination, Navigation, Autoplay]} 
                 pagination={{ clickable: true }}
                 navigation
                 loop
                 autoplay={{
-                    delay: 3000, // 3 seconds delay
-                    disableOnInteraction: false, // Keep autoplay even when interacting with the swiper
+                    delay: 3000, 
+                    disableOnInteraction: false, 
                 }}
                 className="h-[670px] w-full"
             >

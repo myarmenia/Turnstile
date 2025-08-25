@@ -57,6 +57,15 @@ const ConsultingModal = () => {
 
       await axios.post('https://backend.turniket.am/send-email', sendMessage);
 
+      // 🔹 Отправляем событие в Google Analytics
+      if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+        window.gtag('event', 'form_submission', {
+          event_category: 'Contact',
+          event_label: orderCode || 'Unknown product',
+          value: 1
+        });
+      }
+
       resetForm();
       toast.success(t('message.success'));
       dispatch(toggleConsultingModal({isview:false, orderCode: ''}))

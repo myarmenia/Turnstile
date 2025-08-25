@@ -1,11 +1,6 @@
 # *
 User-agent: *
-Allow:/
-Allow: /catalog
-Allow: /turnstile
-Allow: /security-systems
-
-
+Allow: /
 
 # Host
 Host: https://turniket.am

@@ -3,7 +3,6 @@
     "title": "HomePage",
     "content": "Home content"
   },
-
   "HomePageCarousel": {
     "titles": [
       "Enhance your turnstile security and control with our solutions.",
@@ -17,7 +16,6 @@
     ],
     "buttonText": "Get Consultation"
   },
-
   "NavMenu": {
     "home": "Home",
     "turnstile": "Turnstile",
@@ -26,11 +24,9 @@
     "about-us": "About Us",
     "catalog": "Our Products"
   },
-
   "NavTop": {
     "address": "Baghramyan st. 79, 1/1"
   },
-
   "TurnstileBanner": {
     "title": "The best solutions for your access control",
     "content": "Choose high-quality turnstiles for any area, tailored to your needs.",
@@ -43,7 +39,6 @@
       "Increased security"
     ]
   },
-
   "BannerList": {
     "title": "Our Range",
     "text": "We offer entrance security and control systems that allow you to:",
@@ -55,23 +50,20 @@
       "Control visitor access with the ability to limit the number of entries. In addition, we implement other features and functionalities in the system according to the client's needs."
     ]
   },
-
   "InfoServices": {
     "titles": [
       "Turnstile Sales and Service",
       "Smart Home Solutions",
       "Barriers and Security Systems"
     ],
-    "btn" : "More"
+    "btn": "More"
   },
-
   "OurProductsSection": {
     "title": "Our Products",
-    "title2": "Entry Systems",
+    "title2": "Our Products",
     "see_more_btn": "View the range",
     "order_btn": "Order"
   },
-
   "QrScanSection": {
     "title": "QR code scanner",
     "description": "If there is no opportunity or space to install a turnstile, we offer you the perfect solution: a QR scanning device that will make your space more organized and convenient.",
@@ -83,19 +75,16 @@
     ],
     "order": "Order"
   },
-
   "MadeInArmeniaSection": {
     "title": "Made in Armenia",
     "description": "We offer a wide range of turnstiles that suit different needs and environments, from offices to high-traffic public areas. Our products are manufactured in Armenia, ensuring high quality and competitive prices. Turnstiles are suitable for both security and law enforcement. We also offer customized solutions to meet your requirements.",
     "view_more_btn": "View the range"
   },
-
   "TurnstileInfoSection": {
     "title": "Your Reliable Choice of Turnstiles",
     "description": "The turnstiles are equipped with the latest technologies: card, QR code and facial recognition systems. They are made of high-quality materials, ensuring durability and long-term use. Our products provide easy installation, technical support and affordable prices to meet the needs of any business.",
     "view_more_btn": "View the range"
   },
-
   "ServicesSection": {
     "titles": [
       "With all types of systems",
@@ -108,7 +97,6 @@
       "RFID card"
     ]
   },
-
   "TurnstileServicesCicyleSection": {
     "titles": [
       "Our turnstile services, from sales to maintenance",
@@ -122,14 +110,12 @@
     ],
     "btn": "Free consultation"
   },
-
   "AdminPanelScreenSection": {
     "titles": [
       "Track the entry and exit of your employees",
       "Our turnstile systems allow you to easily and accurately track the entry and exit of your employees, providing a high level of control."
     ]
   },
-
   "DeviceSection": {
     "titleTurnstilePage": "You can also find us here.",
     "titleHomePage": "Security systems",
@@ -138,10 +124,9 @@
     "items": [
       "Facial recognition devices",
       "QR scanning devices",
-      "Parking management"
+      "Smart shelves"
     ]
   },
-
   "OurWorksSection": {
     "title": "Our works",
     "items": [
@@ -156,7 +141,6 @@
       "RFID card, QR, fingerprint, facial recognition turnstiles for museums, cinemas, theaters and other places"
     ]
   },
-
   "ContactSection": {
     "title": "Fill in the fields to get a consultation.",
     "placeholders": [
@@ -171,22 +155,18 @@
       "Message",
       "Send"
     ],
-
     "validations": [
       "Full Name is required!",
       "Phone number is required!",
       "Email is required!",
       "Email format is incorrect."
     ],
-
     "btn": "Get a free consultation",
-
     "message": {
-            "success" : "Your application has been successfully sent.",
-            "error" :  "Something is wrong."
-        }
+      "success": "Your application has been successfully sent.",
+      "error": "Something is wrong."
+    }
   },
-
   "FrequentlyAsked": {
     "title": "Frequently asked questions",
     "questions": [
@@ -232,105 +212,219 @@
       }
     ]
   },
-
   "SecuritySystemsBanner": {
     "title": "Overall Security Management of the Area through Your Phone",
     "description": "Smart solutions for barriers, vehicle recognition, facial recognition, alarm activation, and more.",
     "btn": "Find the solution."
   },
-
-  "MobileAppSection":{
-    "title" : "Download our app."
+  "MobileAppSection": {
+    "title": "Download our app."
   },
-
-  "WhyChooseUsSection" : {
-    "title" : "Why choose us?",
-    "list" : [
-        "Customized solutions for your space and business needs.",
-        "Innovative technologies integrated with any infrastructure.",
-        "Data security with strict confidentiality.",
-        "Reliability and long-term support."
+  "WhyChooseUsSection": {
+    "title": "Why choose us?",
+    "list": [
+      "Customized solutions for your space and business needs.",
+      "Innovative technologies integrated with any infrastructure.",
+      "Data security with strict confidentiality.",
+      "Reliability and long-term support."
     ]
-   },
-
-   "SecurityInfoSection" :{
-        "firstTitle" : "Stay Connected with Your Security System.",
-        "secondTitle" : "Alarm Activation.",
-        "firstParagraph" : "With our advanced solutions, you can monitor your space's security from anywhere. Use our convenient app or website to view, respond, and control your system instantly. Stay connected to your devices in real time, whether you're at home or on the go.",
-        "secondParagraph" : "Respond immediately to any threat with alarm activation. Our system is designed to notify you of danger through sound, light, and remote alerts. With additional integration, you can activate or deactivate the alarm from your phone without being on-site.",
-        "firstList" : {
-            "title" : "Features:",
-            "list"  : [
-                "Live video streaming.",
-                "Security status check.",
-                "Alerts in case of danger.",
-                "User-friendly interface with compatibility across all devices."
-            ]
-        },
-        "secondList" : {
-            "title" : "Features:",
-            "list" : [
-                "Visual and audio signals.",
-                "Remote control capability.",
-                "Automatic noise detection.",
-                "Active status of the area."
-            ]
-        }
-
-    },
-
-    "OurSolutionsSection" : {
-        "title" : "Our Solutions.",
-        "btn" : "Details.",
-        "itemTitles" : [
-            "Barrier Control.",
-            "Vehicle Recognition.",
-            "Facial Recognition.",
-            "Infrared Rays.",
-            "Laser Control.",
-            "Vehicle Recognition.",
-            "Facial Recognition.",
-            "Infrared Rays."
-        ],
-        "itemDescriptions" : [
-            "Use your phone for the automatic opening and closing of barriers. Our systems ensure quick response, motion control, and precise data collection.",
-            "Smart vehicle recognition solutions enable automated entry and exit, while artificial intelligence records license plates and driving patterns.",
-            "Facial recognition technology provides a high level of security by allowing entry only to authorized individuals, preventing unauthorized access.",
-            "Security solutions with infrared rays are perfect for large areas. They provide motion detection and alert systems, allowing you to respond directly from your phone.",
-            "Laser-based security solutions are ideal for large areas. They provide motion detection and alert systems, allowing you to respond directly from your phone.",
-            "Smart vehicle recognition solutions enable automated entry and exit, while artificial intelligence records license plates and driving patterns.",
-            "Facial recognition technology provides a high level of security by allowing entry only to authorized individuals, preventing unauthorized access.",
-            "Infrared-ray security solutions are excellent for large areas. They provide motion detection and alert systems, allowing you to respond directly from your phone."
-        ]
-    },
-
-    "CategorySection" : {
-      "btn" : "More",
-      "items" : [
-          {
-              "title" : "Smart home",
-              "description" : "Automate everything, from lights to curtains"
-          },
-          {
-              "title" : "Security systems",
-              "description" : "Monitor everything happening in your home or workplace through your phone"
-          },
-          {
-              "title" : "Access control systems",
-              "description" : "Our turnstile systems allow you to easily and accurately monitor your employees' entry and exit, ensuring a high level of control."
-          }
+  },
+  "SecurityInfoSection": {
+    "smartShelvesTitle": "Smart shelves",
+    "smartShelvesParagraph": "Card-operated bedside cabinets webex A great solution for having a safe box that is safe from thieves, also available in different colors. You bring the card close to the cabinet and it opens automatically.",
+    "firstTitle": "Stay Connected with Your Security System.",
+    "secondTitle": "Alarm Activation.",
+    "firstParagraph": "With our advanced solutions, you can monitor your space's security from anywhere. Use our convenient app or website to view, respond, and control your system instantly. Stay connected to your devices in real time, whether you're at home or on the go.",
+    "secondParagraph": "Respond immediately to any threat with alarm activation. Our system is designed to notify you of danger through sound, light, and remote alerts. With additional integration, you can activate or deactivate the alarm from your phone without being on-site.",
+    "firstList": {
+      "title": "Features:",
+      "list": [
+        "Live video streaming.",
+        "Security status check.",
+        "Alerts in case of danger.",
+        "User-friendly interface with compatibility across all devices."
       ]
-  },
-
-  "metadata": {
-        "title": "Turnstiles for Sale | Турникеты на продажу",
-        "description": "Our turnstile sales website provides innovative and reliable solutions for access control. Our range includes high-quality turnstiles that ensure security, efficiency, and convenience in various environments—from business centers to gyms and government institutions. High quality and durability | Modern design and technology |  Fast delivery and installation | Professional consultation -- Наш сайт продажи турникетов предлагает инновационные и надежные решения для контроля доступа. В нашем ассортименте есть высококачественные турникеты, которые обеспечивают безопасность, эффективность и удобство в различных средах — от бизнес-центров до спортивных залов и государственных учреждений. Высокое качество и долговечность | Современный дизайн и технологии | Быстрая доставка и установка | Профессиональные консультации"
     },
-
-    "create_by_webex": [
-        "turniket.am is powered by ",
-        "Webex Technologies",
-        ""
+    "secondList": {
+      "title": "Features:",
+      "list": [
+        "Visual and audio signals.",
+        "Remote control capability.",
+        "Automatic noise detection.",
+        "Active status of the area."
+      ]
+    },
+    "tm22Info": [
+      "A modern and practical solution for your bedroom – the WebEx Premium Smart nightstand combines elegant design with multifunctional features.",
+      "Key Features: Bluetooth connectivity – allowing you to connect to your smartphone or other devices and enjoy your favorite music wirelessly.",
+      "Wireless charging – convenient charging for your smartphone (compatible with Qi-enabled devices).",
+      "Light effects – built-in LED lights in various colors that create a relaxing or romantic atmosphere.",
+      "Socket – adapted for connecting any electronic devices.",
+      "Design & Dimensions: 50x40x46 cm (H×W×D), ideal for placing next to your bed.",
+      "Style: Modern, minimalist design that fits into any interior.",
+      "Materials: A combination of natural stone and wood, ensuring durability and premium quality.",
+      "The WebEx Premium Smart nightstand will make your bedroom more comfortable and equipped with technological solutions. Buy now and enjoy your smart home!",
+      "The right choice – for modern living."
     ]
-
+  },
+  "OurSolutionsSection": {
+    "title": "Our Solutions.",
+    "btn": "Details.",
+    "itemTitles": [
+      "Barrier Control.",
+      "Vehicle Recognition.",
+      "Facial Recognition.",
+      "Infrared Rays.",
+      "Laser Control.",
+      "Vehicle Recognition.",
+      "Facial Recognition.",
+      "Infrared Rays."
+    ],
+    "itemDescriptions": [
+      "Use your phone for the automatic opening and closing of barriers. Our systems ensure quick response, motion control, and precise data collection.",
+      "Smart vehicle recognition solutions enable automated entry and exit, while artificial intelligence records license plates and driving patterns.",
+      "Facial recognition technology provides a high level of security by allowing entry only to authorized individuals, preventing unauthorized access.",
+      "Security solutions with infrared rays are perfect for large areas. They provide motion detection and alert systems, allowing you to respond directly from your phone.",
+      "Laser-based security solutions are ideal for large areas. They provide motion detection and alert systems, allowing you to respond directly from your phone.",
+      "Smart vehicle recognition solutions enable automated entry and exit, while artificial intelligence records license plates and driving patterns.",
+      "Facial recognition technology provides a high level of security by allowing entry only to authorized individuals, preventing unauthorized access.",
+      "Infrared-ray security solutions are excellent for large areas. They provide motion detection and alert systems, allowing you to respond directly from your phone."
+    ]
+  },
+  "CategorySection": {
+    "btn": "More",
+    "items": [
+      {
+        "title": "Smart home",
+        "description": "Automate everything, from lights to curtains"
+      },
+      {
+        "title": "Security systems",
+        "description": "Monitor everything happening in your home or workplace through your phone"
+      },
+      {
+        "title": "Access control systems",
+        "description": "Our turnstile systems allow you to easily and accurately monitor your employees' entry and exit, ensuring a high level of control."
+      }
+    ]
+  },
+  "metadata": {
+    "title": "Turnstiles for Sale | Турникеты на продажу",
+    "description": "Our turnstile sales website provides innovative and reliable solutions for access control. Our range includes high-quality turnstiles that ensure security, efficiency, and convenience in various environments—from business centers to gyms and government institutions. High quality and durability | Modern design and technology |  Fast delivery and installation | Professional consultation -- Наш сайт продажи турникетов предлагает инновационные и надежные решения для контроля доступа. В нашем ассортименте есть высококачественные турникеты, которые обеспечивают безопасность, эффективность и удобство в различных средах — от бизнес-центров до спортивных залов и государственных учреждений. Высокое качество и долговечность | Современный дизайн и технологии | Быстрая доставка и установка | Профессиональные консультации"
+  },
+  "create_by_webex": [
+    "turniket.am is powered by ",
+    "Webex Technologies",
+    ""
+  ],
+  "singleProductPageInfo": [
+    "1. Driving voltage: DC24V",
+    "2. Channel width: 550-800mm",
+    "3. Drive mode: Digital mode",
+    "4. Infrared sensors: 4-8 pairs optional",
+    "5. Working environment: -25°C to +75°C",
+    "6. Passing speed: 30-45 people/minute",
+    "7. Average trouble-free operation: 6 million times",
+    "8. Anti-collision design with clutch lock",
+    "9. Unauthorized intrusion and reverse direction alarm, infrared anti-pinch protection, 3D anti-collision mechanism",
+    "10. Size: 1400×100×980mm",
+    "11. Weight: 50kg"
+  ],
+  "singleProductPageTitles": [
+    "Technical parameters",
+    "Similar products"
+  ],
+  "catalog": {
+    "pz-3": [
+      "1. Driving voltage: DC24V",
+      "2. Channel width: 550-800mm",
+      "3. Drive mode: Digital mode",
+      "4. Infrared sensors: 4-8 pairs optional",
+      "5. Working environment: -25°C to +75°C",
+      "6. Passing speed: 25-45 people/minute",
+      "7. Average trouble-free operation: 6 million times",
+      "8. Anti-collision safety system with clutch lock",
+      "9. Unauthorized intrusion and reverse direction alarm, infrared anti-pinch protection, 3D anti-collision mechanism",
+      "10. Size: 1400×100×980mm",
+      "11. Weight: 50kg"
+    ],
+    "pz-4": [
+      "1. Driving voltage: DC24V",
+      "2. Channel width: 550-800mm",
+      "3. Drive mode: Digital mode",
+      "4. Infrared sensors: 4-8 pairs optional",
+      "5. Working environment: -25°C to +75°C",
+      "6. Passing speed: 30-45 people/minute",
+      "7. Average trouble-free operation: 6 million times",
+      "8. Anti-collision safety system with clutch lock",
+      "9. Unauthorized intrusion and reverse direction alarm, infrared anti-pinch protection, 3D anti-collision mechanism",
+      "10. Size: 1400×100×980mm",
+      "11. Weight: 50kg"
+    ],
+    "pz-6": [
+      "1. Driving voltage: DC24V",
+      "2. Channel width: 550-800mm",
+      "3. Drive mode: Digital mode",
+      "4. Infrared sensors: 4-8 pairs optional",
+      "5. Working environment: -25°C to +75°C",
+      "6. Passing speed: 30-45 people/minute",
+      "7. Average trouble-free operation: 6 million times",
+      "8. Anti-collision safety system with clutch lock",
+      "9. Unauthorized intrusion and reverse direction alarm, infrared anti-pinch protection, 3D anti-collision mechanism",
+      "10. Size: 1400×100×980mm",
+      "11. Weight: 45kg"
+    ],
+    "pz-21": [
+      "1. Driving voltage: DC24V",
+      "2. Channel width: 550-650mm",
+      "3. Drive mode: Digital mode",
+      "4. Infrared sensors: 4-8 pairs optional",
+      "5. Working environment: -25°C to +75°C",
+      "6. Passing speed: 25-40 people/minute",
+      "7. Average trouble-free operation: 6 million times",
+      "8. Anti-collision safety system with clutch lock",
+      "9. Unauthorized intrusion and reverse direction alarm, infrared anti-pinch protection, 3D anti-collision mechanism",
+      "10. Size: 1200×200×980mm",
+      "11. Weight: 35kg"
+    ],
+    "pz-20": [
+      "1. Driving voltage: AC100-240V (10%), 3.5A, 50/60Hz",
+      "2. Channel width: 600-1000mm",
+      "3. Drive mode: Servo closed loop algorithmic control",
+      "4. Infrared sensors: Military grade 8 pairs",
+      "5. Working environment: -25°C to +50°C, ≤95% humidity non-condensing",
+      "6. Passing speed: 40-60 people/minute",
+      "7. Average trouble-free operation: 10 million times",
+      "8. Anti-collision safety system with 4-fold protection (infrared anti-clip, mechanical anti-clip, door body position detection, current detection anti-collision)",
+      "9. Unauthorized intrusion and reverse direction alarm",
+      "10. Size: 1500×150×960mm",
+      "11. Weight: Not specified"
+    ],
+    "tv-1": [
+      "1. Name: RFID Wristband",
+      "2. Model Numbers: HC-WB-01, HC-WB-02, HC-WB-03, HC-WB-04, HC-WB-05",
+      "3. Material: Silicone, ABS, PVC, Fabric, Nylon, Paper",
+      "4. Size: Children/Adults",
+      "5. Color: Red, Blue, Yellow, Green, Purple, Black (Can be customized by Panton color or CMYK color)",
+      "6. Reading Distance: 0~10 cm",
+      "7. Data Retention: >10 years",
+      "8. Read-Write Cycles: >100,000 times",
+      "9. Temperature Resistance: -30°C ~ +180°C",
+      "10. Working Temperature: -30°C ~ +75°C",
+      "11. Feature: Waterproof"
+    ],
+    "pz-26": [
+      "1. Power Input: AC100-240V, 50/60Hz",
+      "2. Working Voltage and Power: 24V, 150W",
+      "3. Dimensions: 600×120×980mm",
+      "4. Channel Width: 600mm",
+      "5. Passing Speed: 35 persons/minute",
+      "6. Working Temperature: -20°C ~ +60°C",
+      "7. Working Humidity: ≤95% non-condensing",
+      "8. Mechanism: Brushless servo motor + encoder + clutch",
+      "9. MCBF (Mean Cycles Between Failure): 5 million",
+      "10. Photocells: 4 pairs",
+      "11. Net Weight: 65kg"
+    ]
+  }
 }
