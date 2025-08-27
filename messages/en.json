@@ -425,6 +425,32 @@
       "9. MCBF (Mean Cycles Between Failure): 5 million",
       "10. Photocells: 4 pairs",
       "11. Net Weight: 65kg"
+    ],
+    "pz-64": [
+      "1. Driving voltage: DC24V",
+      "2. Moving Pipes: ~550mm",
+      "3. Drive mode: Digital mode",
+      "4. Tripod type",
+      "5. Working environment: -25°C to +45°C",
+      "6. Passing speed: 15-25 people/minute",
+      "7. Average trouble-free operation: 6 million times",
+      "8. Anti-Corrosion for overall turnstile",
+      "9. Stainless steel",
+      "10. Size: 410×600×1500mm",
+      "11. Net weight: 40kg"
+    ],
+    "pz-66": [
+      "1. Driving voltage: DC24V",
+      "2. Moving Pipes: ~550mm",
+      "3. Drive mode: Digital mode",
+      "4. Tripod type",
+      "5. Working environment: -25°C to +45°C",
+      "6. Passing speed: 15-25 people/minute",
+      "7. Average trouble-free operation: 6 million times",
+      "8. Anti-Corrosion for overall turnstile",
+      "9. Stainless steel",
+      "10. Size: 410×600×1600mm",
+      "11. Net weight: 43kg"
     ]
   }
 }

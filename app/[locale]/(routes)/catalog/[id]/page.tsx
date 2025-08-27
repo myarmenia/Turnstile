@@ -44,7 +44,7 @@ const OneProduct = () => {
     );
   }
 
-  const productCodes = ['PZ-3', 'PZ-4', 'PZ-21', 'PZ-6', 'PZ-20', "TV-1", 'PZ-26']
+  const productCodes = ['PZ-3', 'PZ-4', 'PZ-21', 'PZ-6', 'PZ-20', "TV-1", 'PZ-26','PZ-64','PZ-66']
 
 
   return (
@@ -101,7 +101,8 @@ const OneProduct = () => {
                   <li>{t("SecurityInfoSection.tm22Info.8")}</li>
                   <li>{t("SecurityInfoSection.tm22Info.9")}</li>
                 </ul>
-              )
+              ) 
+              
 
                 : !productCodes.includes(product.code) ? ('') : (
                   <ul className="flex flex-col gap-[10px]">
@@ -157,6 +158,7 @@ const OneProduct = () => {
             }
           </div>
         }
+
 
         <div className="w-full px-4">
           <h2 className="text-2xl font-bold mb-[50px] text-blue-900">
