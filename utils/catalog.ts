@@ -70,7 +70,7 @@ import pz26Img1 from "@/public/images/PZ-26Img1.png"
 export const our_products_data = [
   {
     id:'28',
-    code:'PZ-64',
+    code:'PZ-sanitaric-64',
     price1:'',
     price2:'',
     img:[pz_64_img],
@@ -78,7 +78,7 @@ export const our_products_data = [
   },
   {
     id:'27',
-    code:'PZ-66',
+    code:'PZ-hygiene-66',
     price1:'',
     price2:'',
     img:[pz_66_img],
