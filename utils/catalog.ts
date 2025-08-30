@@ -14,8 +14,8 @@ import pk1_1Img2 from "@/public/images/PK-01Img2.jpg"
 import pk1_1Img3 from "@/public/images/PK-01Img3.jpg"
 import pk1_1img4 from "@/public/images/PK-01Img4.jpg"
 import br_1_img from "@/public/images/BR-01.jpg"
-import pz_66_img from '@/public/images/PZ-66.jpg'
-import pz_64_img from '@/public/images/PZ-64.jpg'
+import pz_hygiene_66_img from '@/public/images/PZ-hygiene-66.jpg'
+import pz_sanitaric_64_img from '@/public/images/PZ-sanitaric-64.jpg'
 import pz_25_img from "@/public/images/PZ-25.png"
 import pz_24_img from "@/public/images/PZ-24.png"
 import pz_19_img from "@/public/images/PZ-19.jpg"
@@ -70,18 +70,18 @@ import pz26Img1 from "@/public/images/PZ-26Img1.png"
 export const our_products_data = [
   {
     id:'28',
-    code:'PZ-64',
+    code:'PZ-sanitaric-64',
     price1:'',
     price2:'',
-    img:[pz_64_img],
+    img:[pz_sanitaric_64_img],
     videos:['/videos/PZ-64Video1.mp4','/videos/PZ-64Video2.mp4']
   },
   {
     id:'27',
-    code:'PZ-66',
+    code:'PZ-hygiene-66',
     price1:'',
     price2:'',
-    img:[pz_66_img],
+    img:[pz_hygiene_66_img],
     videos:['/videos/PZ-66.mp4']
   },
   {
