@@ -44,7 +44,7 @@ const OneProduct = () => {
     );
   }
 
-  const productCodes = ['PZ-3', 'PZ-4', 'PZ-21', 'PZ-6', 'PZ-20', "TV-1", 'PZ-26','PZ-64','PZ-66']
+  const productCodes = ['PZ-3', 'PZ-4', 'PZ-21', 'PZ-6', 'PZ-20', "TV-1", 'PZ-26','PZ-sanitaric-64','PZ-hygiene-66']
 
 
   return (
@@ -81,7 +81,11 @@ const OneProduct = () => {
             </h1>
             <div className="flex flex-col gap-[20px]">
               <h2 className="arm_Hmks_Bebas_Neue font-semibold text-[20px] leading-[28.8px] font_color uppercase">
-                {product.code === "TM-11" ? t("SecurityInfoSection.smartShelvesTitle") : !productCodes.includes(product.code) ? ('') : t("singleProductPageTitles.0")}
+                {product.code === "TM-11" ? t("SecurityInfoSection.smartShelvesTitle") 
+                : !productCodes.includes(product.code) ? ('') : t("singleProductPageTitles.0") &&
+                product.code === "PZ-sanitaric-64" || product.code === "PZ-hygiene-66" 
+                ? t("catalogNewProductPageTitles.0") : !productCodes.includes(product.code) ? ('') 
+                : t("singleProductPageTitles.0")}
               </h2>
 
               {product.code === "TM-11" ? (
