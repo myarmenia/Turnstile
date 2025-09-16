@@ -24,22 +24,14 @@ const CategorySection = () => {
             id: '1',
             title: t("items.0.title"),
             description: t("items.0.description"),
-            path: `/smart-home`,
-            bg: categorySmartHomeImg.src,
+            path: `/security-systems`,
+            bg: categorySecuritySystemsImg.src,
         },
 
         {
             id: '2',
             title: t("items.1.title"),
             description: t("items.1.description"),
-            path: `/security-systems`,
-            bg: categorySecuritySystemsImg.src,
-        },
-
-        {
-            id: '3',
-            title: t("items.2.title"),
-            description: t("items.2.description"),
             path: `/turnstile`,
             bg: categoryTurnstileImg.src,
         },

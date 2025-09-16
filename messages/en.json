@@ -337,6 +337,87 @@
   "catalogNewProductPageTitles": {
     "title": "Hygiene Turnstile technical parameters"
   },
+  "titleInfoProducts": [
+    {
+        "itemTitle": "Hygienic Turnstile PZ-sanitaric-64, 304 stainless steel, digital control, 25 passages/minute"
+    },
+    {
+        "itemTitle": "PZ-hygiene-66 Hygienic Turnstile, 304 stainless steel, digital mode and high reliability"
+    },
+    {
+        "itemTitle": "PZ-26 High Power Turnstile, entrance automatic control system, 304 stainless steel, brushless servo motor, 35 people/minute passage"
+    },
+    {
+        "itemTitle": "TM-22 WebEx Premium Smart Tube, multifunctional bedroom solution with wireless charging and light effects"
+    },
+    {
+        "itemTitle": "TV-1 RFID Bracelet for Adults and Children, 100,000+ read-write cycles, durable temperature operation"
+    },
+    {
+        "itemTitle": "PZ-3 Turnstile, 550-800 mm Passage Width, 304 stainless steel, anti-collision safety system"
+    },
+    {
+        "itemTitle": "TM-11 Webex Smart Cabinet, safe and convenient storage solution"
+    },
+    {
+        "itemTitle": "PZ-21 Turnstile, digital mode, 304 stainless steel, anti-collision safety system, 35 kg weight"
+    },
+    {
+        "itemTitle": "PZ-20 Turnstile, high protection, 304 stainless steel, continuous operation resource and wide passage dimensions"
+    },
+    {
+        "itemTitle": "PZ-4 Turnstile, 550-800 mm Passage Width, 304 stainless steel, anti-collision safety system"
+    },
+    {
+        "itemTitle": "PZ-6 Turnstile, 550-800 mm Passage Width, 45 kg weight, 304 stainless steel, anti-collision safety system"
+    }
+  ],
+  "productMetaDataInfo": [
+    {
+      "title": "PZ-sanitaric-64 Stainless Steel Hygienic Turnstile",
+      "description": "High-quality hygienic tripod turnstile with 25 persons/min speed. Ideal for cleanrooms and industrial facilities."
+    },
+    {
+      "title": "PZ-hygiene-66 Tripod Turnstile for Food Industry",
+      "description": "304 stainless steel turnstile with digital control, 25 passages/min. Perfect for hygienic and food processing areas."
+    },
+    {
+      "title": "PZ-26 Infrared Sensor Servo Turnstile Gate",
+      "description": "Fast passage gate with servo motor, 4 infrared sensor pairs, 600mm width, and 35 users/min capacity."
+    },
+    {
+      "title": "TM-22 WebEx Smart Tube | LED, Bluetooth & Wireless",
+      "description": "Modern smart tube with Bluetooth, LED lights, and wireless charging. Perfect bedside gadget for smart living."
+    },
+    {
+      "title": "TV-1 Waterproof RFID Wristband | Durable & Smart",
+      "description": "RFID silicone wristband with 10cm read range, waterproof design, and 10-year data retention. Great for all ages."
+    },
+    {
+      "title": "PZ-3 Stainless Steel Passage System | 6M Cycles",
+      "description": "Digital turnstile system with anti-collision, 4 infrared sensors, 24V power. Built for durability and safety."
+    },
+    {
+      "title": "TM-11 WebEx Smart Cabinet with Card Access",
+      "description": "Smart bedside cabinet with secure card-based access and stylish color options. Ideal for safe storage at home."
+    },
+    {
+      "title": "PZ-21 Smart Passage Gate | Anti-Collision & IR",
+      "description": "Reliable 6M cycle turnstile with 4 IR sensors, reverse alert, and DC24V. Safe solution for controlled access."
+    },
+    {
+      "title": "PZ-20 Heavy-Duty Passage System | Military IR Sensors",
+      "description": "Advanced access gate with 8 military-grade IR sensors, 10M cycles, 4-layer protection, and servo control."
+    },
+    {
+      "title": "PZ-4 Fast Data Passage Gate | Anti-Collision, 6M Cycles",
+      "description": "30–45 users/min turnstile with 4 IR sensors and stainless steel body. Efficient and secure for high-traffic areas."
+    },
+    {
+      "title": "PZ-6 Smart Turnstile System | 6M Cycles & Safety",
+      "description": "Smart passage solution with reverse and anti-collision protection. 24V powered and suitable for any setting."
+    }
+  ],
   "catalog": {
     "pz-3": [
       "1. Driving voltage: DC24V",
@@ -347,7 +428,7 @@
       "6. Passing speed: 25-45 people/minute",
       "7. Average trouble-free operation: 6 million times",
       "8. Anti-collision safety system with clutch lock",
-      "9. Unauthorized intrusion and reverse direction alarm, infrared anti-pinch protection, 3D anti-collision mechanism",
+      "9. 304 Type Stainless Steel",
       "10. Size: 1400×100×980mm",
       "11. Weight: 50kg"
     ],
@@ -360,7 +441,7 @@
       "6. Passing speed: 30-45 people/minute",
       "7. Average trouble-free operation: 6 million times",
       "8. Anti-collision safety system with clutch lock",
-      "9. Unauthorized intrusion and reverse direction alarm, infrared anti-pinch protection, 3D anti-collision mechanism",
+      "9. 304 Type Stainless Steel",
       "10. Size: 1400×100×980mm",
       "11. Weight: 50kg"
     ],
@@ -373,7 +454,7 @@
       "6. Passing speed: 30-45 people/minute",
       "7. Average trouble-free operation: 6 million times",
       "8. Anti-collision safety system with clutch lock",
-      "9. Unauthorized intrusion and reverse direction alarm, infrared anti-pinch protection, 3D anti-collision mechanism",
+      "9. 304 Type Stainless Steel",
       "10. Size: 1400×100×980mm",
       "11. Weight: 45kg"
     ],
@@ -386,7 +467,7 @@
       "6. Passing speed: 25-40 people/minute",
       "7. Average trouble-free operation: 6 million times",
       "8. Anti-collision safety system with clutch lock",
-      "9. Unauthorized intrusion and reverse direction alarm, infrared anti-pinch protection, 3D anti-collision mechanism",
+      "9. 304 Type Stainless Steel",
       "10. Size: 1200×200×980mm",
       "11. Weight: 35kg"
     ],
@@ -399,7 +480,7 @@
       "6. Passing speed: 40-60 people/minute",
       "7. Average trouble-free operation: 10 million times",
       "8. Anti-collision safety system with 4-fold protection (infrared anti-clip, mechanical anti-clip, door body position detection, current detection anti-collision)",
-      "9. Unauthorized intrusion and reverse direction alarm",
+      "9. 304 Type Stainless Steel",
       "10. Size: 1500×150×960mm",
       "11. Weight: Not specified"
     ],
@@ -425,7 +506,7 @@
       "6. Working Temperature: -20°C ~ +60°C",
       "7. Working Humidity: ≤95% non-condensing",
       "8. Mechanism: Brushless servo motor + encoder + clutch",
-      "9. MCBF (Mean Cycles Between Failure): 5 million",
+      "9. 304 Type Stainless Steel",
       "10. Photocells: 4 pairs",
       "11. Net Weight: 65kg"
     ],
@@ -438,7 +519,7 @@
       "6. Passing speed: 15-25 people/minute",
       "7. Average trouble-free operation: 6 million times",
       "8. Anti-Corrosion for overall turnstile",
-      "9. Stainless steel",
+      "9. 304 Type Stainless Steel",
       "10. Size: 410×600×1500mm",
       "11. Net weight: 40kg"
     ],
@@ -451,7 +532,7 @@
       "6. Passing speed: 15-25 people/minute",
       "7. Average trouble-free operation: 6 million times",
       "8. Anti-Corrosion for overall turnstile",
-      "9. Stainless steel",
+      "9. 304 Type Stainless Steel",
       "10. Size: 410×600×1600mm",
       "11. Net weight: 43kg"
     ]

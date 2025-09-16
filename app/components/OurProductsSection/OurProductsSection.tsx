@@ -17,15 +17,27 @@ import "swiper/css/navigation";
 import { our_products_data } from '@/utils/catalog';
 import Link from 'next/link';
 
-
-
+const productCodeToTitleIndex: Record<string, number> = {
+  "PZ-sanitaric-64": 0,
+  "PZ-hygiene-66": 1,
+  "PZ-26": 2,
+  "TM-22": 3,
+  "TV-1": 4,
+  "PZ-3": 5,
+  "TM-11": 6,
+  "PZ-21": 7,
+  "PZ-20": 8,
+  "PZ-4": 9,
+  "PZ-6": 10,
+};
 
 const OurProductsSection = ({ title }: { title: string }) => {
-  const t = useTranslations('OurProductsSection');
-    // const router = useRouter();
-    const [lang, setLang] = useState('am');
+  const t = useTranslations('');
+  // const router = useRouter();
+  const [lang, setLang] = useState('am');
+  const productCodes = ['PZ-3', 'PZ-4', 'PZ-21', 'PZ-6', 'PZ-20', "TV-1", 'PZ-26','TM-11','TM-22', 'PZ-sanitaric-64', 'PZ-hygiene-66']
 
-     useEffect(() => {
+  useEffect(() => {
     const cookieLang = document.cookie
       .split('; ')
       .find(row => row.startsWith('lang='))
@@ -74,7 +86,7 @@ const OurProductsSection = ({ title }: { title: string }) => {
         <div className="flex items-center justify-center gap-3">
           <LineIcon width={27} height={2} color="#5939F5" />
           <h2 className="text-[24px] font_color font-normal arm_Hmks_Bebas_Neue leading-[28.8px]">
-            {t(`${title}`)}
+            {t(`OurProductsSection.title`)}
           </h2>
           <LineIcon width={27} height={2} color="#5939F5" />
         </div>
@@ -112,8 +124,8 @@ const OurProductsSection = ({ title }: { title: string }) => {
             </div>
           ))}
         </div> */}
-          <div className='w-full px-4'>
-         <Swiper
+        <div className='w-full px-4'>
+          <Swiper
             slidesPerView={4}
             spaceBetween={30}
             navigation={true}
@@ -143,9 +155,14 @@ const OurProductsSection = ({ title }: { title: string }) => {
             }}
             className="mySwiper"
           >
-            {our_products_data.map((product) => (
+            {our_products_data.map(product => {
+              const titleIndex = productCodeToTitleIndex[product.code];
+              const title = productCodes.includes(product.code) && titleIndex !== undefined
+              ? t(`titleInfoProducts.${titleIndex}.itemTitle`) : "";
+              return (
               <SwiperSlide key={product.id}>
-                <Link href={`/${lang}/catalog/${product.code}`} className="flex flex-col items-center">
+                <Link href={`/${lang}/catalog/${product.code}`} className="flex flex-col items-center"
+                 title={title}>
                   <Image
                     src={product.img[0]}
                     alt={product.id}
@@ -154,12 +171,13 @@ const OurProductsSection = ({ title }: { title: string }) => {
                   <p className="text-lg mt-2 font-semibold">{product.code}</p>
                 </Link>
               </SwiperSlide>
-            ))}
+            )
+            })}
           </Swiper>
 
         </div>
 
-        <ButtonParrentComponent btnText={t('see_more_btn')}/>
+        <ButtonParrentComponent btnText={t('OurProductsSection.see_more_btn')} />
       </div>
     </div>
   );

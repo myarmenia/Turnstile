@@ -1,35 +1,91 @@
-"use client";
+// "use client";
 
+// import React from "react";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
 import ButtonComponent from "@/app/components/ButtonComponent/ButtonComponent";
-import { our_products_data } from "@/utils/catalog";
-import { useParams } from "next/navigation";
-import { SwiperSlide, Swiper } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import { useTranslations } from "next-intl";
 import VideoComponent from "@/app/components/VideoComonent/VideoComonent";
-import Link from "next/link";
+import SimilarProductsSwiper from "@/app/components/SimilarProductsSwiper/SimilarProductsSwiper";
+import { our_products_data } from "@/utils/catalog";
+import { getTranslations } from "next-intl/server";
+import { cookies } from "next/headers";
+import { Metadata } from "next";
+import SingleProductSwiper from "@/app/components/SingleProductSwiper/SingleProductSwiper";
+// import { useParams } from "next/navigation";
+// import { SwiperSlide, Swiper } from "swiper/react";
+// import { Autoplay, Navigation } from "swiper/modules";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import { useTranslations } from "next-intl";
+// import Link from "next/link";
 
-const OneProduct = () => {
-  const params = useParams();
-  const id = params?.id as string | undefined;
 
-  const t = useTranslations();
+type Props = {
+  params: {
+    [key: string]: string;
+  };
+};
 
- 
-      const [lang, setLang] = useState('am');
+const productCodeToTitleIndex: Record<string, number> = {
+  "PZ-sanitaric-64": 0,
+  "PZ-hygiene-66": 1,
+  "PZ-26": 2,
+  "TM-22": 3,
+  "TV-1": 4,
+  "PZ-3": 5,
+  "TM-11": 6,
+  "PZ-21": 7,
+  "PZ-20": 8,
+  "PZ-4": 9,
+  "PZ-6": 10,
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = params
+
+  const productCodes = [
+    'PZ-3', 'PZ-4', 'PZ-21', 'PZ-6', 'PZ-20', 'TV-1',
+    'PZ-26', 'TM-11', 'TM-22', 'PZ-sanitaric-64', 'PZ-hygiene-66'
+  ]
+
+  const t = await getTranslations('')
+
+  const titleIndex = productCodeToTitleIndex[id]
   
-       useEffect(() => {
-      const cookieLang = document.cookie
-        .split('; ')
-        .find(row => row.startsWith('lang='))
-        ?.split('=')[1] || 'am';
-      setLang(cookieLang);
-    }, []);
+  let title = ''
+  let description = ''
+  {productCodes.includes(id) && titleIndex !== undefined ?
+  title = t(`productMetaDataInfo.${titleIndex}.title`) : '' }
+  {productCodes.includes(id) && titleIndex !== undefined ?
+  description = t(`productMetaDataInfo.${titleIndex}.description`) : '' }
 
+  return {
+    title,
+    description
+  }
+}
+
+
+
+const OneProduct = async ({ params }: Props) => {
+  const { id } = params
+  // const params = useParams();
+  // const id = params?.id as string | undefined;
+
+  // const t = useTranslations();
+
+
+  // const [lang, setLang] = useState('am');
+
+  // useEffect(() => {
+  //   const cookieLang = document.cookie
+  //     .split('; ')
+  //     .find(row => row.startsWith('lang='))
+  //     ?.split('=')[1] || 'am';
+  //   setLang(cookieLang);
+  // }, []);
+  const cookieLang = (await cookies()).get('lang')?.value || 'am';
+
+  const t = await getTranslations({ locale: cookieLang });
   const product = id
     ? our_products_data.find((item) => item.code === id)
     : undefined;
@@ -44,15 +100,18 @@ const OneProduct = () => {
     );
   }
 
-  const productCodes = ['PZ-3', 'PZ-4', 'PZ-21', 'PZ-6', 'PZ-20', "TV-1", 'PZ-26','PZ-sanitaric-64','PZ-hygiene-66']
-
+  const productCodes = ['PZ-3', 'PZ-4', 'PZ-21', 'PZ-6', 'PZ-20', "TV-1", 
+  'PZ-26', 'TM-11', 'TM-22', 'PZ-sanitaric-64', 'PZ-hygiene-66']
+  const titleIndex = productCodeToTitleIndex[product.code];
+  const title = productCodes.includes(product.code) && titleIndex !== undefined
+  ? t(`titleInfoProducts.${titleIndex}.itemTitle`) : "";
 
   return (
     <div className="one_product_page">
       <div className="container py-6 flex flex-col gap-7 px-[20px]">
         <div className="flex max-md:flex-col justify-center items-start gap-[80px]">
-          <div className="w-[45%] max-md:w-full">
-            <Swiper
+          <div className="w-[45%] max-md:w-full" title={title}>
+            {/* <Swiper
               slidesPerView={1}
               spaceBetween={10}
               navigation
@@ -73,7 +132,8 @@ const OneProduct = () => {
                   />
                 </SwiperSlide>
               ))}
-            </Swiper>
+            </Swiper> */}
+            <SingleProductSwiper/>
           </div>
           <div className="w-[45%] h-[full] flex flex-col gap-[20px] max-md:w-full justify-center">
             <h1 className="arm_Hmks_Bebas_Neue font-semibold text-[30px] leading-[37.6px] font_color uppercase">
@@ -81,12 +141,12 @@ const OneProduct = () => {
             </h1>
             <div className="flex flex-col gap-[20px]">
               <h2 className="arm_Hmks_Bebas_Neue font-semibold text-[20px] leading-[28.8px] font_color uppercase">
-                {product.code === "TM-11" ? t("SecurityInfoSection.smartShelvesTitle") 
-                : !productCodes.includes(product.code) ? ('') : t("singleProductPageTitles.0") && 
-                product.code === "PZ-hygiene-66" ? t("catalogNewProductPageTitles.title") :
-                !productCodes.includes(product.code) ? ('') : t("singleProductPageTitles.0") &&
-                product.code === "PZ-sanitaric-64" ? t("catalogNewProductPageTitles.title") :
-                !productCodes.includes(product.code) ? ('') : t("singleProductPageTitles.0")}
+                {product.code === "TM-11" ? t("SecurityInfoSection.smartShelvesTitle")
+                  : !productCodes.includes(product.code) ? ('') : t("singleProductPageTitles.0") &&
+                    product.code === "PZ-hygiene-66" ? t("catalogNewProductPageTitles.title") :
+                    !productCodes.includes(product.code) ? ('') : t("singleProductPageTitles.0") &&
+                      product.code === "PZ-sanitaric-64" ? t("catalogNewProductPageTitles.title") :
+                      !productCodes.includes(product.code) ? ('') : t("singleProductPageTitles.0")}
               </h2>
 
               {product.code === "TM-11" ? (
@@ -106,8 +166,8 @@ const OneProduct = () => {
                   <li>{t("SecurityInfoSection.tm22Info.8")}</li>
                   <li>{t("SecurityInfoSection.tm22Info.9")}</li>
                 </ul>
-              ) 
-              
+              )
+
 
                 : !productCodes.includes(product.code) ? ('') : (
                   <ul className="flex flex-col gap-[10px]">
@@ -169,7 +229,7 @@ const OneProduct = () => {
           <h2 className="text-2xl font-bold mb-[50px] text-blue-900">
             {t("singleProductPageTitles.1")}
           </h2>
-          <Swiper
+          {/* <Swiper
             slidesPerView={4}
             spaceBetween={30}
             navigation={true}
@@ -201,7 +261,42 @@ const OneProduct = () => {
           >
             {our_products_data.map((product) => (
               <SwiperSlide key={product.id}>
-                <Link href={`/${lang}/catalog/${product.code}`} className="flex flex-col items-center">
+                <Link href={`/${lang}/catalog/${product.code}`} className="flex flex-col items-center"
+                 title={`${
+            product.code === "PZ-sanitaric-64" && 
+            productCodes.includes(product.code) 
+            && t('titleInfoProducts.0.itemTitle') ||
+            product.code === "PZ-hygiene-66" && 
+            productCodes.includes(product.code) 
+            && t('titleInfoProducts.1.itemTitle') ||
+            product.code === "PZ-26" && 
+            productCodes.includes(product.code) 
+            && t('titleInfoProducts.2.itemTitle') ||
+            product.code === "TM-22" && 
+            productCodes.includes(product.code) 
+            && t('titleInfoProducts.3.itemTitle') ||
+            product.code === "TV-1" && 
+            productCodes.includes(product.code) 
+            && t('titleInfoProducts.4.itemTitle') ||
+            product.code === "PZ-3" && 
+            productCodes.includes(product.code) 
+            && t('titleInfoProducts.5.itemTitle') ||
+            product.code === "TM-11" && 
+            productCodes.includes(product.code) 
+            && t('titleInfoProducts.6.itemTitle') ||
+            product.code === "PZ-21" && 
+            productCodes.includes(product.code) 
+            && t('titleInfoProducts.7.itemTitle') ||
+            product.code === "PZ-20" && 
+            productCodes.includes(product.code) 
+            && t('titleInfoProducts.8.itemTitle') ||
+            product.code === "PZ-4" && 
+            productCodes.includes(product.code) 
+            && t('titleInfoProducts.9.itemTitle') ||
+            product.code === "PZ-6" && 
+            productCodes.includes(product.code) 
+            && t('titleInfoProducts.10.itemTitle') ||
+            !productCodes.includes(product.code) && ""}`}>
                   <Image
                     src={product.img[0]}
                     alt={product.id}
@@ -211,7 +306,8 @@ const OneProduct = () => {
                 </Link>
               </SwiperSlide>
             ))}
-          </Swiper>
+          </Swiper> */}
+          <SimilarProductsSwiper />
         </div>
       </div>
     </div>
