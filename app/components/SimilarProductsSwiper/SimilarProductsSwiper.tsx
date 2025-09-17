@@ -79,6 +79,7 @@ const SimilarProductsSwiper = () => {
                         title={title}>
                         <Image
                             src={product.img[0]}
+                            title={title}
                             alt={product.id}
                             className="object-cover h-[250px]"
                         />

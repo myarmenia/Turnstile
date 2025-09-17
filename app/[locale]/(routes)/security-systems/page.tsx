@@ -13,6 +13,28 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
     title: 'Անվտանգության Համակարգեր | Security Systems | Системы Безопасности',
     description: 'Մենք առաջարկում ենք բարձրորակ անվտանգության համակարգեր՝ նախատեսված ձեր բիզնեսի և տան պահանջներին համապատասխան: Մեր լուծումները ներառում են վիդեոհսկողություն, մուտքի վերահսկում, հրդեհային ահազանգեր և այլն: Ժամանակակից տեխնոլոգիաներ, մասնագիտական տեղադրում և աջակցություն: Наши решения включают видеонаблюдение, контроль доступа, пожарную сигнализацию и многое другое. Современные технологии, профессиональная установка и поддержка. We offer high-quality security systems tailored to your business and home needs. Our solutions include video surveillance, access control, fire alarms, and more. Modern technologies, professional installation, and support. turniket gnel | turniketner vacharq | mutqi hamakarg | տուռնիկետ տուռնիկետների վաճառք | տուռնիկետներ գնել մուտքի համակարգ | անվտանգության համակարգ | турникеты ереван | турникет | купить турникет | продажа турникетов | система безопасности',
+    openGraph: {
+    title: 'Անվտանգության Համակարգեր | Security Systems | Системы Безопасности',
+    description: 'Մենք առաջարկում ենք բարձրորակ անվտանգության համակարգեր՝ նախատեսված ձեր բիզնեսի և տան պահանջներին համապատասխան: Մեր լուծումները ներառում են վիդեոհսկողություն, մուտքի վերահսկում, հրդեհային ահազանգեր և այլն: Ժամանակակից տեխնոլոգիաներ, մասնագիտական տեղադրում և աջակցություն: Наши решения включают видеонаблюдение, контроль доступа, пожарную сигнализацию и многое другое. Современные технологии, профессиональная установка и поддержка. We offer high-quality security systems tailored to your business and home needs. Our solutions include video surveillance, access control, fire alarms, and more. Modern technologies, professional installation, and support. turniket gnel | turniketner vacharq | mutqi hamakarg | տուռնիկետ տուռնիկետների վաճառք | տուռնիկետներ գնել մուտքի համակարգ | անվտանգության համակարգ | турникеты ереван | турникет | купить турникет | продажа турникетов | система безопасности',
+    url: "https://turniket.am/security-systems",
+    siteName: "turniket.am",
+    type: "website",
+    locale: "am",
+    images: [
+      {
+        url: "/public/images/navlogo.png",
+        width: 700,
+        height: 650,
+        alt: "Անվտանգության Համակարգեր | Security Systems | Системы Безопасности"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: 'Անվտանգության Համակարգեր | Security Systems | Системы Безопасности',
+    description: 'Մենք առաջարկում ենք բարձրորակ անվտանգության համակարգեր՝ նախատեսված ձեր բիզնեսի և տան պահանջներին համապատասխան: Մեր լուծումները ներառում են վիդեոհսկողություն, մուտքի վերահսկում, հրդեհային ահազանգեր և այլն: Ժամանակակից տեխնոլոգիաներ, մասնագիտական տեղադրում և աջակցություն: Наши решения включают видеонаблюдение, контроль доступа, пожарную сигнализацию и многое другое. Современные технологии, профессиональная установка и поддержка. We offer high-quality security systems tailored to your business and home needs. Our solutions include video surveillance, access control, fire alarms, and more. Modern technologies, professional installation, and support. turniket gnel | turniketner vacharq | mutqi hamakarg | տուռնիկետ տուռնիկետների վաճառք | տուռնիկետներ գնել մուտքի համակարգ | անվտանգության համակարգ | турникеты ереван | турникет | купить турникет | продажа турникетов | система безопасности',
+    images: ["/public/images/navlogo.png"]
+  },
     alternates: {
         canonical: 'https://turniket.am/',
         languages: {

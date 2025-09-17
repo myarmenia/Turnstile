@@ -1,6 +1,5 @@
-// "use client";
 
-// import React from "react";
+import React from "react";
 import Image from "next/image";
 import ButtonComponent from "@/app/components/ButtonComponent/ButtonComponent";
 import VideoComponent from "@/app/components/VideoComonent/VideoComonent";
@@ -10,13 +9,6 @@ import { getTranslations } from "next-intl/server";
 import { cookies } from "next/headers";
 import { Metadata } from "next";
 import SingleProductSwiper from "@/app/components/SingleProductSwiper/SingleProductSwiper";
-// import { useParams } from "next/navigation";
-// import { SwiperSlide, Swiper } from "swiper/react";
-// import { Autoplay, Navigation } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import { useTranslations } from "next-intl";
-// import Link from "next/link";
 
 
 type Props = {
@@ -46,7 +38,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     'PZ-3', 'PZ-4', 'PZ-21', 'PZ-6', 'PZ-20', 'TV-1',
     'PZ-26', 'TM-11', 'TM-22', 'PZ-sanitaric-64', 'PZ-hygiene-66'
   ]
-
+  const product = id ? 
+  our_products_data.find((product => product.code === id)) 
+  : undefined
+  
   const t = await getTranslations('')
 
   const titleIndex = productCodeToTitleIndex[id]
@@ -57,32 +52,37 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   title = t(`productMetaDataInfo.${titleIndex}.title`) : '' }
   {productCodes.includes(id) && titleIndex !== undefined ?
   description = t(`productMetaDataInfo.${titleIndex}.description`) : '' }
-
+    
   return {
     title,
-    description
+    description,
+    openGraph: {
+    title: title,
+    description: description,
+    url: `https://turniket.am/catalog/${product?.code}`,
+    siteName: "turniket.am",
+    type: "website",
+    images: [
+      {
+        url: `${product?.img[0].src}`,
+        width: 700,
+        height: 650,
+        alt: title
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: title,
+    description: description,
+    images: [`${product?.img[0].src}`]
+  },
   }
 }
 
-
-
 const OneProduct = async ({ params }: Props) => {
   const { id } = params
-  // const params = useParams();
-  // const id = params?.id as string | undefined;
 
-  // const t = useTranslations();
-
-
-  // const [lang, setLang] = useState('am');
-
-  // useEffect(() => {
-  //   const cookieLang = document.cookie
-  //     .split('; ')
-  //     .find(row => row.startsWith('lang='))
-  //     ?.split('=')[1] || 'am';
-  //   setLang(cookieLang);
-  // }, []);
   const cookieLang = (await cookies()).get('lang')?.value || 'am';
 
   const t = await getTranslations({ locale: cookieLang });
@@ -111,28 +111,6 @@ const OneProduct = async ({ params }: Props) => {
       <div className="container py-6 flex flex-col gap-7 px-[20px]">
         <div className="flex max-md:flex-col justify-center items-start gap-[80px]">
           <div className="w-[45%] max-md:w-full" title={title}>
-            {/* <Swiper
-              slidesPerView={1}
-              spaceBetween={10}
-              navigation
-              loop
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-              }}
-              className="productImageSlider h-full max-md:h-[300px]"
-              modules={[Autoplay, Navigation]}
-            >
-              {product.img.map((image, index) => (
-                <SwiperSlide key={index}>
-                  <Image
-                    src={image}
-                    alt={`${product.code}-${index}`}
-                    className="w-full h-[500px] rounded object-cover"
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper> */}
             <SingleProductSwiper/>
           </div>
           <div className="w-[45%] h-[full] flex flex-col gap-[20px] max-md:w-full justify-center">
@@ -142,11 +120,11 @@ const OneProduct = async ({ params }: Props) => {
             <div className="flex flex-col gap-[20px]">
               <h2 className="arm_Hmks_Bebas_Neue font-semibold text-[20px] leading-[28.8px] font_color uppercase">
                 {product.code === "TM-11" ? t("SecurityInfoSection.smartShelvesTitle")
-                  : !productCodes.includes(product.code) ? ('') : t("singleProductPageTitles.0") &&
-                    product.code === "PZ-hygiene-66" ? t("catalogNewProductPageTitles.title") :
-                    !productCodes.includes(product.code) ? ('') : t("singleProductPageTitles.0") &&
-                      product.code === "PZ-sanitaric-64" ? t("catalogNewProductPageTitles.title") :
-                      !productCodes.includes(product.code) ? ('') : t("singleProductPageTitles.0")}
+                : !productCodes.includes(product.code) ? ('') : t("singleProductPageTitles.0") &&
+                  product.code === "PZ-hygiene-66" ? t("catalogNewProductPageTitles.title") :
+                  !productCodes.includes(product.code) ? ('') : t("singleProductPageTitles.0") &&
+                  product.code === "PZ-sanitaric-64" ? t("catalogNewProductPageTitles.title") :
+                  !productCodes.includes(product.code) ? ('') : t("singleProductPageTitles.0")}
               </h2>
 
               {product.code === "TM-11" ? (
@@ -229,84 +207,6 @@ const OneProduct = async ({ params }: Props) => {
           <h2 className="text-2xl font-bold mb-[50px] text-blue-900">
             {t("singleProductPageTitles.1")}
           </h2>
-          {/* <Swiper
-            slidesPerView={4}
-            spaceBetween={30}
-            navigation={true}
-            modules={[Navigation, Autoplay]}
-            loop
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            breakpoints={{
-              320: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-              },
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-              },
-              1280: {
-                slidesPerView: 4,
-                spaceBetween: 30,
-              },
-            }}
-            className="mySwiper"
-          >
-            {our_products_data.map((product) => (
-              <SwiperSlide key={product.id}>
-                <Link href={`/${lang}/catalog/${product.code}`} className="flex flex-col items-center"
-                 title={`${
-            product.code === "PZ-sanitaric-64" && 
-            productCodes.includes(product.code) 
-            && t('titleInfoProducts.0.itemTitle') ||
-            product.code === "PZ-hygiene-66" && 
-            productCodes.includes(product.code) 
-            && t('titleInfoProducts.1.itemTitle') ||
-            product.code === "PZ-26" && 
-            productCodes.includes(product.code) 
-            && t('titleInfoProducts.2.itemTitle') ||
-            product.code === "TM-22" && 
-            productCodes.includes(product.code) 
-            && t('titleInfoProducts.3.itemTitle') ||
-            product.code === "TV-1" && 
-            productCodes.includes(product.code) 
-            && t('titleInfoProducts.4.itemTitle') ||
-            product.code === "PZ-3" && 
-            productCodes.includes(product.code) 
-            && t('titleInfoProducts.5.itemTitle') ||
-            product.code === "TM-11" && 
-            productCodes.includes(product.code) 
-            && t('titleInfoProducts.6.itemTitle') ||
-            product.code === "PZ-21" && 
-            productCodes.includes(product.code) 
-            && t('titleInfoProducts.7.itemTitle') ||
-            product.code === "PZ-20" && 
-            productCodes.includes(product.code) 
-            && t('titleInfoProducts.8.itemTitle') ||
-            product.code === "PZ-4" && 
-            productCodes.includes(product.code) 
-            && t('titleInfoProducts.9.itemTitle') ||
-            product.code === "PZ-6" && 
-            productCodes.includes(product.code) 
-            && t('titleInfoProducts.10.itemTitle') ||
-            !productCodes.includes(product.code) && ""}`}>
-                  <Image
-                    src={product.img[0]}
-                    alt={product.id}
-                    className="object-cover h-[250px]"
-                  />
-                  <p className="text-lg mt-2 font-semibold">{product.code}</p>
-                </Link>
-              </SwiperSlide>
-            ))}
-          </Swiper> */}
           <SimilarProductsSwiper />
         </div>
       </div>
